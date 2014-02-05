@@ -1,0 +1,149 @@
+<!DOCTYPE html> 
+
+<html> 
+	<head> 
+	<title>Progress Trackr</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
+
+
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+
+</head> 
+<body> 
+<!--HOME-->
+<div data-role="page" id="home">
+	<!--STUPID PANEL-->
+	<div data-role="panel" id="mypanel">
+		<!--panel content-->
+	</div>
+
+	<!--/PANEL-->
+	<div data-role="header" data-theme="b">
+		<h1>Progress Trackr</h1>
+		<a href="#mypanel" data-icon="gear" data-iconpos="notext" class="ui-btn-right" data-backbtn="false"></a>
+
+	</div>
+	
+	<div data-role="content" data-theme="c">	
+		<p>DIARIES</p>
+		<a href="#diary" data-role="button" data-theme="b"> Diary 1 </a>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="a">
+			<ul>
+				<li><a href="#">Create Diary</a></li>
+			</ul>
+		</div>
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+
+
+
+
+<!--DIARY PAGE-->
+<div data-role="page" id="diary">
+	<!--STUPID PANEL-->
+	<div data-role="panel" id="mypanel">
+		<!--panel content-->
+	</div>
+
+	<!--/PANEL-->
+	<div data-role="header" data-theme="b" data-backbtn="false">
+		<a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-left" data-transition="slidedown"></a>
+		<h1>Diary 1</h1>
+		<a href="#mypanel" data-icon="gear" data-iconpos="notext" class="ui-btn-right" data-backbtn="false"></a>
+
+		<div data-role="navbar" data-theme="a">
+			<ul>
+				<li><a href="#" data-role="button" class="ui-btn-active ui-state-persist"> Diary View </a></li>
+				<li><a href="#compare" data-role="button" data-transition="none"> Comparison View</a></li>
+			</ul>
+		</div><!-- /header -->
+	</div>
+	
+	<div data-role="content" data-theme="c">	
+		<p>DIARY</p>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="a">
+			<ul>
+				<li><a href="#newphoto">Take a New Photo</a></li>
+			</ul>
+		</div>
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+
+
+
+<!--PAGE COMPARISONs-->
+<div data-role="page" id="compare" data-backbtn="false">
+	<div data-role="header" data-theme="b" data-backbtn="false">
+			<a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-left" data-transition="slidedown"></a>
+		<h1>Diary 1</h1>
+				<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
+
+		<div data-role="navbar" data-theme="a">
+			<ul>
+				<li><a href="#diary" data-role="button" data-transition="none"> Diary View</a></li>
+				<li><a href="#" data-role="button" class="ui-btn-active ui-state-persist"> Comparison View </a></li>
+			</ul>
+		</div><!-- /header -->
+	</div>
+
+	<div data-role="content" data-theme="c">
+		<p>COMPARISON</p>
+	</div>
+
+	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="a">
+			<ul>
+				<li><a href="#newphoto" data-transition="slideup">Take a New Photo</a></li>
+			</ul>
+		</div>
+	</div><!-- /footer -->
+</div>
+
+
+<!--PAGE NEW PHOTO-->
+<div data-role="page" id="newphoto">
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Progress Trackr</h1>
+				<a href="#mypanel" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
+
+		<div data-role="navbar" data-theme="a">
+			<ul>
+				<li><a href="#diary" data-role="button" data-transition="none"> Diary View</a></li>
+				<li><a href="#compare" data-role="button"> Comparison View </a></li>
+			</ul>
+		</div><!-- /header -->
+	</div>
+
+	<div data-role="content" data-theme="c">
+		<h3>Add Photo to Diary</h3>
+	<!--IMAGE CAPTURE AND UPLOAD VIA FORM-->
+		<form action="upload.htm" method="post" enctype="multipart/form-data">
+ 			<input type="file" accept="image/*" capture>
+  			<input type="submit" value="Upload">
+		</form>
+	<!--END IMAGE CAPTURE AND UPLOAD-->
+	</div>
+
+	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="a">
+			<ul>
+				<li><a href="#diary" class="ui-btn-active ui-state-persist" data-transition="slidedown">Done</a></li>
+			</ul>
+		</div> 
+	</div><!-- /footer -->
+</div>
+
+
+</body>
+</html>
