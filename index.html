@@ -13,6 +13,32 @@
 
 </head> 
 <body> 
+
+<!--LOGIN-->
+<div data-role="page">
+	<div data-role="header" data-theme="b">
+		<h1>Progress Trackr</h1>
+		<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right" data-backbtn="false"></a>
+
+	</div>
+	
+	<div data-role="content" data-theme="c">	
+		<a href="#home" data-role="button" data-theme="c">This is where the login screen will go, click here for next page</a>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="a">
+			<ul>
+				<li><a href="#">MAYBE ANOTHER BUTTON</a></li>
+			</ul>
+		</div>
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+
+
+
+
 <!--HOME-->
 <div data-role="page" id="home">
 	<!--STUPID PANEL-->
@@ -47,16 +73,12 @@
 
 <!--DIARY PAGE-->
 <div data-role="page" id="diary">
-	<!--STUPID PANEL-->
-	<div data-role="panel" id="mypanel">
-		<!--panel content-->
-	</div>
-
-	<!--/PANEL-->
 	<div data-role="header" data-theme="b" data-backbtn="false">
-		<a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-left" data-transition="slidedown"></a>
+		<a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-left" data-transition="slide" data-direction="reverse"></a>
+		
 		<h1>Diary 1</h1>
-		<a href="#mypanel" data-icon="gear" data-iconpos="notext" class="ui-btn-right" data-backbtn="false"></a>
+		
+		<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right" data-backbtn="false"></a>
 
 		<div data-role="navbar" data-theme="a">
 			<ul>
@@ -73,11 +95,10 @@
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
 		<div data-role="navbar" data-theme="a">
 			<ul>
-				<li><a href="#newphoto">Take a New Photo</a></li>
+				<li><a href="#newphoto" data-transition="slideup">Take a New Photo</a></li>
 			</ul>
 		</div>
 	</div><!-- /footer -->
-
 </div><!-- /page -->
 
 
@@ -85,7 +106,7 @@
 <!--PAGE COMPARISONs-->
 <div data-role="page" id="compare" data-backbtn="false">
 	<div data-role="header" data-theme="b" data-backbtn="false">
-			<a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-left" data-transition="slidedown"></a>
+			<a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-left" data-transition="slide" data-direction="reverse"></a>
 		<h1>Diary 1</h1>
 				<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
 
@@ -138,7 +159,7 @@
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
 		<div data-role="navbar" data-theme="a">
 			<ul>
-				<li><a href="#diary" class="ui-btn-active ui-state-persist" data-transition="slidedown">Done</a></li>
+				<li><a href="#diary" class="ui-btn-active ui-state-persist" data-transition="slideup" data-direction="reverse">Done</a></li>
 			</ul>
 		</div> 
 	</div><!-- /footer -->
