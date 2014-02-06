@@ -30,7 +30,7 @@
     		<input type="password" name="login_password" id="login_password" placeholder="password"/>
 		</form>
 		<a href="#home" data-role="button" data->Submit</a>
-		<a href="#forgotpasswordprompt" data-rel="dialog" data-transition="pop">forgot your password?</a>
+		<a href="#forgotpasswordprompt" data-rel="dialog" data-transition="fade">forgot your password?</a>
 	</div><!-- /content -->
 
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b" >
@@ -57,11 +57,12 @@
 		<input type="text" name="email" placeholder="Email">
 		<input type="text" name="password" placeholder="Password">
 		<input type="text" name="confirm_password" placeholder="Confirm Password">
+		<a href="#login" data-role="button" data-transition="slideup" data-direction="reverse">Submit</a>
 	</div>
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
 		<div data-role="navbar" data-theme="a" data-iconpos="left">
 			<ul>
-				<li><a href="#login" class="ui-btn-active ui-state-persist" data-transition="slideup" data-direction="reverse" data-icon="arrow-d">Submit</a></li>
+				<li><a href="#login" class="ui-btn-active ui-state-persist" data-transition="slideup" data-direction="reverse" data-icon="arrow-d">Cancel</a></li>
 			</ul>
 		</div> 
 	</div><!-- /footer -->
@@ -115,7 +116,7 @@
 	<div data-role="content" data-theme="c">
 		<center><h4>Not a problem!</h4></center>
 			<input type="text" name="email" placeholder="Email">
-			<a href="#login" data-role="button" data-theme="c">Send</a>
+			<a href="#login" data-role="button" data-theme="c" data-transition="fade">Send</a>
 	</div>
 </div>
 <!--.FORGOT PASSWORD PROMPT-->
