@@ -15,26 +15,29 @@
 <body> 
 
 <!--LOGIN-->
-<div data-role="page" id="login">
+
+<div data-role="page" id="login" data-add-back-btn="false">
 	<div data-role="header" data-theme="b">
 		<h1>TR&#916;CK</h1>
-		<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right" data-backbtn="false"></a>
+		<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
 
 	</div>
 	
 	<div data-role="content" data-theme="c">	
-		<center><img src="TRACKerlogo.png" />
+		<center><img src="TRACKerlogo2.png" />
 		<form method="PUT" action="api/auth" data-ajax="false">
-    		<input type="text" name="login_username" id="login_username" placeholder="username"/><br>
-    		<input type="password" name="login_password" id="login_password" placeholder="password"/><br>
+    		<h3>Please Log In</h3>
+    		<input type="text" name="login_username" id="login_username" placeholder="username"/>
+    		<input type="password" name="login_password" id="login_password" placeholder="password"/>
 		</form>
 		<a href="#home" data-role="button" data->Submit</a>
+		<a href="#">forgot your password?</a>
 	</div><!-- /content -->
 
-	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
-		<div data-role="navbar" data-theme="a">
+	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b" >
+		<div data-role="navbar" data-theme="a" data-iconpos="left">
 			<ul>
-				<li><a href="#register" data-transition="slideup">Register Here</a></li>
+				<li><a href="#register" data-transition="slideup" data-icon="arrow-u">Create an Account</a></li>
 			</ul>
 		</div>
 	</div><!-- /footer -->
@@ -42,23 +45,23 @@
 </div><!-- /page -->
 
 <!--Register/Sign-up-->
-<div data-role="page" id="register">
+<div data-role="page" id="register" data-add-back-btn="false">
 	<div data-role="header" data-theme="b" data-add-back-btn="true">
-		<h1>Sign-Up for TR&#916;CK</h1>
+		<h1>Create an Account</h1>
 				<a href="#mypanel" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
 	</div>
 	<div data-role="content" data-theme="c">
 		<h3>Registration Details</h3>
-		<h4>First Name</h4><input type="text" name="first_name"><br>
-		<h4>Last Name</h4><input type="text" name="last_name"><br>
-		<h4>E-mail</h4><input type="text" name="email"><br>
-		<h4>Password</h4><input type="text" name="password"><br>
-		<h4>Confirm Password</h4><input type="text" name="confirm_password"><br>
+		<h4>First Name</h4><input type="text" name="first_name">
+		<h4>Last Name</h4><input type="text" name="last_name">
+		<h4>E-mail</h4><input type="text" name="email">
+		<h4>Password</h4><input type="text" name="password">
+		<h4>Confirm Password</h4><input type="text" name="confirm_password">
 	</div>
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
-		<div data-role="navbar" data-theme="a">
+		<div data-role="navbar" data-theme="a" data-iconpos="left">
 			<ul>
-				<li><a href="#login" class="ui-btn-active ui-state-persist" data-transition="slideup" data-direction="reverse">Done</a></li>
+				<li><a href="#login" class="ui-btn-active ui-state-persist" data-transition="slideup" data-direction="reverse" data-icon="arrow-d">Submit</a></li>
 			</ul>
 		</div> 
 	</div><!-- /footer -->
@@ -69,17 +72,11 @@
 
 
 <!--HOME-->
-<div data-role="page" id="home">
-	<!--STUPID PANEL-->
-	<div data-role="panel" id="mypanel">
-		<!--panel content-->
-	</div>
-
-	<!--/PANEL-->
+<div data-role="page" id="home" data-add-back-btn="false">
 	<div data-role="header" data-theme="b">
+		<a href="#signoutprompt" data-rel="dialog" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left" data-transition="none" data-direction="reverse"></a>	
 		<h1>TR&#916;CK</h1>
-		<a href="#mypanel" data-icon="gear" data-iconpos="notext" class="ui-btn-right" data-backbtn="false"></a>
-
+		<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
 	</div>
 	
 	<div data-role="content" data-theme="c">	
@@ -88,14 +85,26 @@
 	</div><!-- /content -->
 
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
-		<div data-role="navbar" data-theme="a">
+		<div data-role="navbar" data-theme="a" data-iconpos="left">
 			<ul>
-				<li><a href="#">Create Diary</a></li>
+				<li><a href="#newdiary" data-transition="slideup" data-icon="arrow-u">Create New Diary</a></li>
 			</ul>
 		</div>
 	</div><!-- /footer -->
 
 </div><!-- /page -->
+
+<div data-role="page" id="signoutprompt">
+	<div data-role="header" data-theme="b">
+		<h3>Sign Out?</h3>
+	</div>
+	<div data-role="content" data-theme="c">
+		<p>Are you sure you want to sign out?<p>
+			<a href="#login" data-role="button" data-theme="b">Yes, sign me out</a>
+			<a href="#home" data-role="button" data-theme="a">Cancel</a>
+	</div>
+</div>
+
 
 
 
@@ -103,7 +112,7 @@
 <!--DIARY PAGE-->
 <div data-role="page" id="diary">
 	<div data-role="header" data-theme="b" data-backbtn="false">
-		<a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-left" data-transition="slide" data-direction="reverse"></a>
+		<a href="#home" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left" data-transition="slide" data-direction="reverse"></a>
 		
 		<h1>Diary 1</h1>
 		
@@ -122,9 +131,9 @@
 	</div><!-- /content -->
 
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
-		<div data-role="navbar" data-theme="a">
+		<div data-role="navbar" data-theme="a" data-iconpos="left">
 			<ul>
-				<li><a href="#newphoto" data-transition="slideup">Take a New Photo</a></li>
+				<li><a href="#newphoto" data-transition="slideup" data-icon="arrow-u">Add New Photo</a></li>
 			</ul>
 		</div>
 	</div><!-- /footer -->
@@ -134,8 +143,8 @@
 
 <!--PAGE COMPARISONs-->
 <div data-role="page" id="compare" data-backbtn="false">
-	<div data-role="header" data-theme="b" data-backbtn="false">
-			<a href="#home" data-icon="home" data-iconpos="notext" class="ui-btn-left" data-transition="slide" data-direction="reverse"></a>
+	<div data-role="header" data-theme="b" data-back-btn-text="false">
+		<a href="#home" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left" data-transition="slide" data-direction="reverse"></a>
 		<h1>Diary 1</h1>
 				<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
 
@@ -163,17 +172,18 @@
 
 
 <!--PAGE NEW PHOTO-->
-<div data-role="page" id="newphoto">
-	<div data-role="header" data-theme="b" data-add-back-btn="true">
-		<h1>TR&#916;CK</h1>
+<div data-role="page" id="newphoto" data-add-back-btn="false">
+	<div data-role="header" data-theme="b">
+		<h1>Add New Photo</h1>
 				<a href="#mypanel" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
 
-		<div data-role="navbar" data-theme="a">
+<!--		<div data-role="navbar" data-theme="a">
 			<ul>
 				<li><a href="#diary" data-role="button" data-transition="none"> Diary View</a></li>
 				<li><a href="#compare" data-role="button"> Comparison View </a></li>
 			</ul>
-		</div><!-- /header -->
+		</div>-->
+		<!-- /header -->
 	</div>
 
 	<div data-role="content" data-theme="c">
@@ -187,13 +197,34 @@
 	</div>
 
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
-		<div data-role="navbar" data-theme="a">
+		<div data-role="navbar" data-theme="a" data-iconpos="left">
 			<ul>
-				<li><a href="#diary" class="ui-btn-active ui-state-persist" data-transition="slideup" data-direction="reverse">Done</a></li>
+				<li><a href="#diary" class="ui-btn-active ui-state-persist" data-transition="slideup" data-direction="reverse" data-icon="arrow-d">Done</a></li>
 			</ul>
 		</div> 
 	</div><!-- /footer -->
 </div>
+
+<!--ADD DIARY-->
+<div data-role="page" id="newdiary" data-add-back-btn="false">
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Create New Diary</h1>
+				<a href="#mypanel" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
+	</div>
+	<div data-role="content" data-theme="c">
+		<h3>New Diary Details</h3>
+		<h4>Diary Name</h4><input type="text" name="first_name">
+	</div>
+	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="a" data-iconpos="left">
+			<ul>
+				<li><a href="#home" class="ui-btn-active ui-state-persist" data-transition="slideup" data-direction="reverse" data-icon="arrow-d">Done</a></li>
+			</ul>
+		</div> 
+	</div><!-- /footer -->
+</div>
+<!--End ADD DIARY-->
+
 
 
 </body>
