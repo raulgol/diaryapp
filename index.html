@@ -30,7 +30,7 @@
     		<input type="password" name="login_password" id="login_password" placeholder="password"/>
 		</form>
 		<a href="#home" data-role="button" data->Submit</a>
-		<a href="#">forgot your password?</a>
+		<a href="#forgotpasswordprompt" data-rel="dialog" data-transition="pop">forgot your password?</a>
 	</div><!-- /content -->
 
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b" >
@@ -69,8 +69,6 @@
 <!--End Registration-->
 
 
-
-
 <!--HOME-->
 <div data-role="page" id="home" data-add-back-btn="false">
 	<div data-role="header" data-theme="b">
@@ -80,7 +78,7 @@
 	</div>
 	
 	<div data-role="content" data-theme="c">	
-		<p>DIARIES</p>
+		<h4>My Diaries</h4>
 		<a href="#diary" data-role="button" data-theme="b"> Diary 1 </a>
 	</div><!-- /content -->
 
@@ -94,6 +92,8 @@
 
 </div><!-- /page -->
 
+
+<!--SIGNOUT PROMPT-->
 <div data-role="page" id="signoutprompt">
 	<div data-role="header" data-theme="b">
 		<h3>Sign Out?</h3>
@@ -101,15 +101,28 @@
 	<div data-role="content" data-theme="c">
 		<p>Are you sure you want to sign out?<p>
 			<a href="#login" data-role="button" data-theme="b">Yes, sign me out</a>
-			<a href="#home" data-role="button" data-theme="a">Cancel</a>
+			<a href="#home" data-role="button" data-theme="c">Cancel</a>
 	</div>
 </div>
+<!--/SIGNOUT PROMPT-->
+
+
+<!--FORGOT PASSWORD PROMPT-->
+	<div data-role="page" id="forgotpasswordprompt">
+	<div data-role="header" data-theme="b">
+		<h6>Forgot your Password?</h6>
+	</div>
+	<div data-role="content" data-theme="c">
+		<center><h4>Not a problem!</h4></center>
+			<input type="text" name="email" placeholder="Email">
+			<a href="#login" data-role="button" data-theme="c">Send</a>
+	</div>
+</div>
+<!--.FORGOT PASSWORD PROMPT-->
 
 
 
-
-
-<!--DIARY PAGE-->
+<!--DIARY-->
 <div data-role="page" id="diary">
 	<div data-role="header" data-theme="b" data-backbtn="false">
 		<a href="#home" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left" data-transition="slide" data-direction="reverse"></a>
@@ -127,7 +140,8 @@
 	</div>
 	
 	<div data-role="content" data-theme="c">	
-		<p>DIARY</p>
+		<h4>DIARY VIEW</h4>
+			<p>This page will contain a date-sortable, chronological set of photo diary entries with thumbnails</p>
 	</div><!-- /content -->
 
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
@@ -157,14 +171,14 @@
 	</div>
 
 	<div data-role="content" data-theme="c">
-		<p>COMPARISON PAGE</p>
-		<p>This page will contain 
+		<h4>COMPARISON VIEW</h3>
+		<p>This page will contain interactions that make archived photos easy to compare.</p>
 	</div>
 
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
-		<div data-role="navbar" data-theme="a">
+		<div data-role="navbar" data-theme="a" data-iconpos="left">
 			<ul>
-				<li><a href="#newphoto" data-transition="slideup">Take a New Photo</a></li>
+				<li><a href="#newphoto" data-transition="slideup" data-icon="arrow-u">Add New Photo</a></li>
 			</ul>
 		</div>
 	</div><!-- /footer -->
@@ -176,14 +190,6 @@
 	<div data-role="header" data-theme="b">
 		<h1>Add New Photo</h1>
 				<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
-
-<!--		<div data-role="navbar" data-theme="a">
-			<ul>
-				<li><a href="#diary" data-role="button" data-transition="none"> Diary View</a></li>
-				<li><a href="#compare" data-role="button"> Comparison View </a></li>
-			</ul>
-		</div>-->
-		<!-- /header -->
 	</div>
 
 	<div data-role="content" data-theme="c">
@@ -214,11 +220,13 @@
 	<div data-role="content" data-theme="c">
 		<h3>New Diary Details</h3>
 		<h4>Diary Name</h4><input type="text" name="first_name">
+		<a href="#home" data-role="button" data-transition="slideup" data-direction="reverse">Create</a>
+
 	</div>
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
 		<div data-role="navbar" data-theme="a" data-iconpos="left">
 			<ul>
-				<li><a href="#home" class="ui-btn-active ui-state-persist" data-transition="slideup" data-direction="reverse" data-icon="arrow-d">Done</a></li>
+				<li><a href="#home" class="ui-btn-active ui-state-persist" data-transition="slideup" data-direction="reverse" data-icon="arrow-d">Cancel</a></li>
 			</ul>
 		</div> 
 	</div><!-- /footer -->
