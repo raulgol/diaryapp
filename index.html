@@ -14,7 +14,7 @@
 <body> 
 
 <!--LOGIN-->
-<div data-role="page">
+<div data-role="page" id="login">
 	<div data-role="header" data-theme="b">
 		<h1>TR&#916;CK</h1>
 		<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right" data-backbtn="false"></a>
@@ -31,17 +31,38 @@
 	</div><!-- /content -->
 
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
-<!--		<div data-role="navbar" data-theme="a">
+		<div data-role="navbar" data-theme="a">
 			<ul>
-				<li><a href="#">MAYBE ANOTHER BUTTON</a></li>
+				<li><a href="#register" data-transition="slideup">Register Here</a></li>
 			</ul>
 		</div>
-	-->
 	</div><!-- /footer -->
 
 </div><!-- /page -->
 
-
+<!--Register/Sign-up-->
+<div data-role="page" id="register">
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Sign-Up for TR&#916;CK</h1>
+				<a href="#mypanel" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
+	</div>
+	<div data-role="content" data-theme="c">
+		<h3>Registration Details</h3>
+		<h4>First Name</h4><input type="text" name="first_name"><br>
+		<h4>Last Name</h4><input type="text" name="last_name"><br>
+		<h4>E-mail</h4><input type="text" name="email"><br>
+		<h4>Password</h4><input type="text" name="password"><br>
+		<h4>Confirm Password</h4><input type="text" name="confirm_password"><br>
+	</div>
+	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="a">
+			<ul>
+				<li><a href="#login" class="ui-btn-active ui-state-persist" data-transition="slideup" data-direction="reverse">Done</a></li>
+			</ul>
+		</div> 
+	</div><!-- /footer -->
+</div>
+<!--End Registration-->
 
 
 <!--HOME-->
@@ -141,15 +162,8 @@
 <!--PAGE NEW PHOTO-->
 <div data-role="page" id="newphoto">
 	<div data-role="header" data-theme="b" data-add-back-btn="true">
-		<h1>TR&#916;CK</h1>
+		<h1>Diary 1</h1>
 				<a href="#mypanel" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
-
-		<div data-role="navbar" data-theme="a">
-			<ul>
-				<li><a href="#diary" data-role="button" data-transition="none"> Diary View</a></li>
-				<li><a href="#compare" data-role="button"> Comparison View </a></li>
-			</ul>
-		</div><!-- /header -->
 	</div>
 
 	<div data-role="content" data-theme="c">
