@@ -2,14 +2,14 @@
 
 <html> 
 	<head> 
-	<title>Progress Trackr</title> 
+	<title>TR&#916;CK</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
-
-
+	<link rel="apple-touch-startup-image" href="splash.png" />
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+	<!--<link rel="stylesheet" type="text/css" href="jquery.mobile.flatui.css" /> --> 
 
 </head> 
 <body> 
@@ -17,13 +17,18 @@
 <!--LOGIN-->
 <div data-role="page">
 	<div data-role="header" data-theme="b">
-		<h1>Progress Trackr</h1>
+		<h1>TR&#916;CK</h1>
 		<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right" data-backbtn="false"></a>
 
 	</div>
 	
 	<div data-role="content" data-theme="c">	
-		<a href="#home" data-role="button" data-theme="c">This is where the login screen will go, click here for next page</a>
+		<center><img src="TRACKerlogo.png" />
+		<form method="PUT" action="api/auth" data-ajax="false">
+    		<input type="text" name="login_username" id="login_username" placeholder="username"/><br>
+    		<input type="password" name="login_password" id="login_password" placeholder="password"/><br>
+		</form>
+		<a href="#home" data-role="button" data->Submit</a>
 	</div><!-- /content -->
 
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
@@ -48,7 +53,7 @@
 
 	<!--/PANEL-->
 	<div data-role="header" data-theme="b">
-		<h1>Progress Trackr</h1>
+		<h1>TR&#916;CK</h1>
 		<a href="#mypanel" data-icon="gear" data-iconpos="notext" class="ui-btn-right" data-backbtn="false"></a>
 
 	</div>
@@ -135,7 +140,7 @@
 <!--PAGE NEW PHOTO-->
 <div data-role="page" id="newphoto">
 	<div data-role="header" data-theme="b" data-add-back-btn="true">
-		<h1>Progress Trackr</h1>
+		<h1>TR&#916;CK</h1>
 				<a href="#mypanel" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
 
 		<div data-role="navbar" data-theme="a">
