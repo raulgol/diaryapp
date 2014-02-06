@@ -19,14 +19,13 @@
 <div data-role="page" id="login" data-add-back-btn="false">
 	<div data-role="header" data-theme="b">
 		<h1>TR&#916;CK</h1>
-		<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
+		<a href="#" data-icon="info" data-iconpos="notext" class="ui-btn-right"></a>
 
 	</div>
 	
 	<div data-role="content" data-theme="c">	
-		<center><img src="TRACKerlogo2.png" />
+		<center><img src="TRACKerlogo2.png" /></br></br>
 		<form method="PUT" action="api/auth" data-ajax="false">
-    		<h3>Please Log In</h3>
     		<input type="text" name="login_username" id="login_username" placeholder="username"/>
     		<input type="password" name="login_password" id="login_password" placeholder="password"/>
 		</form>
@@ -48,15 +47,16 @@
 <div data-role="page" id="register" data-add-back-btn="false">
 	<div data-role="header" data-theme="b" data-add-back-btn="true">
 		<h1>Create an Account</h1>
-				<a href="#mypanel" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
+				<a href="#" data-icon="info" data-iconpos="notext" class="ui-btn-right"></a>
 	</div>
 	<div data-role="content" data-theme="c">
 		<h3>Registration Details</h3>
-		<h4>First Name</h4><input type="text" name="first_name">
-		<h4>Last Name</h4><input type="text" name="last_name">
-		<h4>E-mail</h4><input type="text" name="email">
-		<h4>Password</h4><input type="text" name="password">
-		<h4>Confirm Password</h4><input type="text" name="confirm_password">
+		<input type="text" name="first_name" placeholder="First Name">
+		<input type="text" name="last_name" placeholder="Last Name">
+		<input type="text" name="username" placeholder="Username">
+		<input type="text" name="email" placeholder="Email">
+		<input type="text" name="password" placeholder="Password">
+		<input type="text" name="confirm_password" placeholder="Confirm Password">
 	</div>
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
 		<div data-role="navbar" data-theme="a" data-iconpos="left">
@@ -175,7 +175,7 @@
 <div data-role="page" id="newphoto" data-add-back-btn="false">
 	<div data-role="header" data-theme="b">
 		<h1>Add New Photo</h1>
-				<a href="#mypanel" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
+				<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
 
 <!--		<div data-role="navbar" data-theme="a">
 			<ul>
@@ -209,7 +209,7 @@
 <div data-role="page" id="newdiary" data-add-back-btn="false">
 	<div data-role="header" data-theme="b" data-add-back-btn="true">
 		<h1>Create New Diary</h1>
-				<a href="#mypanel" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
+				<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
 	</div>
 	<div data-role="content" data-theme="c">
 		<h3>New Diary Details</h3>
