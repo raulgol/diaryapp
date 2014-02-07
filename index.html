@@ -4,53 +4,60 @@
 	<head> 
 	<title>TR&#916;CK</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
-	<link rel="apple-touch-startup-image" href="splash.png" />
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
-	<script type="text/javascript" src="app.js"></script>
-
-
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4/jquery.mobile-1.0a4.min.css" />
+	<script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0a4/jquery.mobile-1.0a4.min.js"></script>
 </head> 
 <body> 
 
-<!--LOGIN-->
 
+<!--LOGIN-->
 <div data-role="page" id="login" data-add-back-btn="false">
+	<!--Login Header-->
 	<div data-role="header" data-theme="b">
 		<h1>TR&#916;CK</h1>
-		<a href="#" data-icon="info" data-iconpos="notext" class="ui-btn-right"></a>
-
+		<a href="#mypanel" data-icon="info" data-iconpos="notext" class="ui-btn-right"></a>
 	</div>
-	
+	<!--/Login Header-->
+
+	<!--Login Content-->
 	<div data-role="content" data-theme="c">	
-		<center><img src="TRACKerlogo2.png" /></br></br>
+		<!--Logo--><center><img src="Trackerlogo2.png" /></br></br>
+		<!--Login Form-->
 		<form method="PUT" action="api/auth" data-ajax="false">
     		<input type="text" name="login_username" id="login_username" placeholder="username"/>
     		<input type="password" name="login_password" id="login_password" placeholder="password"/>
-		</form>
+		</form>		
 		<a href="#home" data-role="button" data->Submit</a>
 		<a href="#forgotpasswordprompt" data-rel="dialog" data-transition="fade">forgot your password?</a>
-	</div><!-- /content -->
+	</div>
+	<!--/Login Content -->
 
+	<!--Login Footer-->
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b" >
 		<div data-role="navbar" data-theme="a" data-iconpos="left">
 			<ul>
 				<li><a href="#register" data-transition="slideup" data-icon="arrow-u">Create an Account</a></li>
 			</ul>
 		</div>
-	</div><!-- /footer -->
+	</div><!--/Login Footer -->
 
 </div><!-- /page -->
 
-<!--Register/Sign-up-->
+<!--REGISTER/SIGN UP-->
 <div data-role="page" id="register" data-add-back-btn="false">
+	<!--Header-->
 	<div data-role="header" data-theme="b" data-add-back-btn="true">
 		<h1>Create an Account</h1>
 				<a href="#" data-icon="info" data-iconpos="notext" class="ui-btn-right"></a>
 	</div>
+	<!--/Header-->
+
+	<!--Content-->
 	<div data-role="content" data-theme="c">
 		<h3>Registration Details</h3>
+
+		<!--Registration form-->
 		<input type="text" required name="first_name" placeholder="First Name">
 		<input type="text" required name="last_name" placeholder="Last Name">
 		<input type="text" required name="username" placeholder="Username">
@@ -59,15 +66,19 @@
 		<input type="password" required name="confirm_password" placeholder="Confirm Password">
 		<a href="#login" data-role="button" data-transition="slideup" data-direction="reverse">Submit</a>
 	</div>
+	<!--/Content-->
+
+	<!--Footer-->
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
 		<div data-role="navbar" data-theme="a" data-iconpos="left">
 			<ul>
 				<li><a href="#login" class="ui-btn-active ui-state-persist" data-transition="slideup" data-direction="reverse" data-icon="arrow-d">Cancel</a></li>
 			</ul>
 		</div> 
-	</div><!-- /footer -->
+	</div>
+	<!--/Footer -->
 </div>
-<!--End Registration-->
+<!--/REGISTRATION/SIGN UP-->
 
 
 <!--HOME-->
