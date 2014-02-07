@@ -1,14 +1,10 @@
-.diary_view_thumb{
-	width: 100%;
-}
-
-.diary_view_thumb li{
-	height: 100%;
-	width:100%;
-	display:inline;
-}
-
 .diary_view_thumb img{
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.comparison_thumb img{
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -16,7 +12,7 @@
 
 @media all and (max-width: 5em) {
     .my-breakpoint .ui-block-a,
-    .my-breakpoint .ui-block-b,
+    .my-breakpoint .ui-block-b {margin:0px; padding:0px;}
     .my-breakpoint .ui-block-c,
     .my-breakpoint .ui-block-d ,
     .my-breakpoint .ui-block-e {
