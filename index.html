@@ -56,13 +56,14 @@
 	<!--Content-->
 	<div data-role="content" data-theme="c">
 		<h3>Registration Details</h3>
+
 		<!--Registration form-->
-		<input type="text" name="first_name" placeholder="First Name">
-		<input type="text" name="last_name" placeholder="Last Name">
-		<input type="text" name="username" placeholder="Username">
-		<input type="text" name="email" placeholder="Email">
-		<input type="text" name="password" placeholder="Password">
-		<input type="text" name="confirm_password" placeholder="Confirm Password">
+		<input type="text" required name="first_name" placeholder="First Name">
+		<input type="text" required name="last_name" placeholder="Last Name">
+		<input type="text" required name="username" placeholder="Username">
+		<input type="email" required name="email" placeholder="Email">
+		<input type="password" required name="password" placeholder="Password">
+		<input type="password" required name="confirm_password" placeholder="Confirm Password">
 		<a href="#login" data-role="button" data-transition="slideup" data-direction="reverse">Submit</a>
 	</div>
 	<!--/Content-->
