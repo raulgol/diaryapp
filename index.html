@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="public/css/index.css" />
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+
 </head> 
 <body> 
 
@@ -99,7 +101,7 @@
 	<div data-role="header" data-theme="b">
 		<a href="#signoutprompt" data-rel="dialog" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left" data-transition="none" data-direction="reverse"></a>	
 		<h1>TR&#916;CK</h1>
-		<a href="#" data-icon="bars" data-iconpos="notext" class="ui-btn-right"></a>
+		<a href="#" data-icon="bars" data-iconpos="notext" class="showMenu"></a>
 	</div>
 	
 	<div data-role="content" data-theme="c">	
@@ -167,7 +169,6 @@
 	
 	<div data-role="content" data-theme="c">	
 		<h4>DIARY VIEW</h4>
-			<p>This page will contain a date-sortable, chronological set of photo diary entries with thumbnails</p>
 		<div class="diary_view_thumb" id="diary1">
 			<h5>1 Day Ago</h5>
 			  <div role="main" class="ui-content">
@@ -203,11 +204,10 @@
 				  <div class="ui-block-a"><div class="ui-body ui-body-d"><center><img src="images/leftpic.jpeg"></center></div></div>
 				  <div class="ui-block-b"><div class="ui-body ui-body-d"><center><img src="images/centerpic.gif"></center></div></div>
 				  <div class="ui-block-c"><div class="ui-body ui-body-d"><center><img src="images/rightpic.jpeg"></center></div></div>
-				</div></div>	
-		</div>
-	</div><!-- /content -->
+				</div>
+		</div>	
 
-	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
+	<div data-role="footer" data-position="fixed" data-theme="b">
 		<div data-role="navbar" data-theme="a" data-iconpos="left">
 			<ul>
 				<li><a href="#newphoto" data-transition="slideup" data-icon="arrow-u">Add New Photo</a></li>
@@ -223,7 +223,7 @@
 	<div data-role="header" data-theme="b" data-back-btn-text="false">
 		<a href="#home" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left" data-transition="slide" data-direction="reverse"></a>
 		<h1>Diary 1</h1>
-				<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
+				<a href="#" data-icon="bars" data-iconpos="notext" class="ui-btn-right"></a>
 
 		<div data-role="navbar" data-theme="a">
 			<ul>
@@ -263,9 +263,6 @@
 				  <div class="ui-block-c"><div class="ui-body ui-body-d"><center><img src="images/rightpic.jpeg"></center></div></div>
 			</div>
 		</div>
-		
-		</div>
-	</div>
 
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
 		<div data-role="navbar" data-theme="a" data-iconpos="left">
@@ -277,11 +274,21 @@
 </div>
 
 
+<div id="menu">
+<h3>Menu</h3>
+    <ul>
+        <li class="active"><a href="#home" class="contentLink">Home </a></li>
+        <li><a href="#home" class="contentLink">About </a></li>
+        <li><a href="#home" class="contentLink">Portfolio </a></li>
+        <li><a href="#home" class="contentLink">Contact </a></li>
+    </ul>
+</div>
+
 <!--PAGE NEW PHOTO-->
 <div data-role="page" id="newphoto" data-add-back-btn="false">
 	<div data-role="header" data-theme="b">
 		<h1>Add New Photo</h1>
-				<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
+				<a href="#" data-icon="gear" class="showMenu" data-iconpos="notext"></a>
 	</div>
 
 	<div data-role="content" data-theme="c">
@@ -315,6 +322,7 @@
 		<a href="#home" data-role="button" data-transition="slideup" data-direction="reverse">Create</a>
 
 	</div>
+
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
 		<div data-role="navbar" data-theme="a" data-iconpos="left">
 			<ul>
