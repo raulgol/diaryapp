@@ -1,0 +1,28 @@
+{
+  "name": "tcr-track",
+  "version": "0.0.1",
+  "description": "Tracking Diary Application",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rebeccawalsh/diaryapp.git"
+  },
+  "keywords": [
+    "health",
+    "diary",
+    "application"
+  ],
+  "author": "Carla Sun",
+  "license": "None",
+  "bugs": {
+    "url": "https://github.com/rebeccawalsh/diaryapp/issues"
+  },
+  "homepage": "https://github.com/rebeccawalsh/diaryapp",
+  "dependencies": {
+    "logfmt": "~0.20.0",
+    "express": "~3.4.8"
+  }
+}
