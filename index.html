@@ -16,7 +16,7 @@
 	<!--Login Header-->
 	<div data-role="header" data-theme="b">
 		<h1>TR&#916;CK</h1>
-		<a href="#mypanel" data-icon="info" data-iconpos="notext" class="ui-btn-right"></a>
+		<a href="#info" data-rel="dialog" data-icon="info" data-iconpos="notext" class="ui-btn-right"></a>
 	</div>
 	<!--/Login Header-->
 
@@ -82,12 +82,12 @@
 
 
 <!--INFO PAGE-->
-<div data-role="page" id="info">
+<div data-role="page" id="info" data-add-back-btn="true">
 	<div data-role="header" data-theme="b">
 		<h3>Info</h3>
 	</div>
 	<div data-role="content" data-theme="c">
-		<p>There's going to be relevant info here</p>
+		<p>There's going to be relevant info here about the app / developers / contact /etc.</p>
 	</div>
 </div>
 <!--INFO PAGE-->
@@ -98,7 +98,7 @@
 	<div data-role="header" data-theme="b">
 		<a href="#signoutprompt" data-rel="dialog" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-left" data-transition="none" data-direction="reverse"></a>	
 		<h1>TR&#916;CK</h1>
-		<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
+		<a href="#" data-icon="bars" data-iconpos="notext" class="ui-btn-right"></a>
 	</div>
 	
 	<div data-role="content" data-theme="c">	
@@ -137,7 +137,8 @@
 		<h6>Forgot your Password?</h6>
 	</div>
 	<div data-role="content" data-theme="c">
-		<center><h4>Not a problem!</h4></center>
+		<center><h4>Not a problem!</h4>
+			<p>Give us your email and we'll send you a message on how to retrieve your account.</center>
 			<input type="text" name="email" placeholder="Email">
 			<a href="#login" data-role="button" data-theme="c" data-transition="fade">Send</a>
 	</div>
@@ -153,7 +154,7 @@
 		
 		<h1>Diary 1</h1>
 		
-		<a href="#" data-icon="gear" data-iconpos="notext" class="ui-btn-right" data-backbtn="false"></a>
+		<a href="#" data-icon="bars" data-iconpos="notext" class="ui-btn-right" data-backbtn="false"></a>
 
 		<div data-role="navbar" data-theme="a">
 			<ul>
