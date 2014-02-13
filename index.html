@@ -9,6 +9,22 @@
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="custom.css">
+
+	<!--swipebox-->
+	<link rel="stylesheet" href="source/swipebox.css">
+	<script src="lib/jquery-2.0.3.js"></script>
+	<script src="source/jquery.swipebox.js"></script>
+	<!--/swipebox-->
+
+	<!--twentytwenty-->
+	<script src="js/jquery.event.move.js"></script>
+	<script src="js/jquery.twentytwenty.js"></script>
+	<link rel="stylesheet" href="css/foundation.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/twentytwenty.css"/>
+	<!--/twentytwenty-->
+
 </head> 
 <body> 
 
@@ -30,7 +46,7 @@
     		<input type="text" name="login_username" id="login_username" placeholder="username"/>
     		<input type="password" name="login_password" id="login_password" placeholder="password"/>
 		</form>		
-		<a href="#home" data-role="button">Submit</a>
+		<a href="#home" data-role="button">Sign In</a>
 		<a href="#forgotpasswordprompt" data-rel="dialog" data-transition="fade">forgot your password?</a>
 	</div>
 	<!--/Login Content -->
@@ -81,7 +97,6 @@
 </div>
 <!--/REGISTRATION/SIGN UP-->
 
-
 <!--INFO PAGE-->
 <div data-role="page" id="info" data-add-back-btn="true">
 	<div data-role="header" data-theme="b">
@@ -104,8 +119,6 @@
 		<ul data-role="listview" data-theme="b">
     		<li data-icon="home"><a href="#">Home</a></li>
    			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
-    		<li data-icon="user"><a href="#account">Account</a></li>
-    		<li data-icon="gear"><a href="#settings">Settings</a></li>
     		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
 		</ul></br>
 	</div><!-- /panel -->
@@ -169,8 +182,6 @@
 		<ul data-role="listview" data-theme="b">
     		<li data-icon="home"><a href="#home">Home</a></li>
    			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
-    		<li data-icon="user"><a href="#account">Account</a></li>
-    		<li data-icon="gear"><a href="#settings">Settings</a></li>
     		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
 		</ul></br>
 	</div><!-- /panel -->
@@ -192,43 +203,35 @@
 	
 	<div data-role="content" data-theme="c">	
 		<h4>DIARY VIEW</h4>
-		<div class="diary_view_thumb" id="diary1">
-			<h5>1 Day Ago</h5>
-			  <div role="main" class="ui-content">
-				<div class="ui-grid-b my-breakpoint">
-				  <div class="ui-block-a"><div class="ui-body ui-body-d"><center><img src="images/leftpic.jpeg"></center></div></div>
-				  <div class="ui-block-b"><div class="ui-body ui-body-d"><center><img src="images/centerpic.gif"></center></div></div>
-				  <div class="ui-block-c"><div class="ui-body ui-body-d"><center><img src="images/rightpic.jpeg"></center></div></div>
-				</div></div>
-		</div>
-		
-		<div class="diary_view_thumb" id="diary2">
-			<h5>1 Week Ago</h5>
-			  <div role="main" class="ui-content">
-				<div class="ui-grid-b my-breakpoint">
-				  <div class="ui-block-a"><div class="ui-body ui-body-d"><center><img src="images/leftpic.jpeg"></center></div></div>
-				  <div class="ui-block-b"><div class="ui-body ui-body-d"><center><img src="images/centerpic.gif"></center></div></div>
-				  <div class="ui-block-c"><div class="ui-body ui-body-d"><center><img src="images/rightpic.jpeg"></center></div></div>
-				</div></div>	
-		</div>
-		
-		<div class="diary_view_thumb" id="diary3">
-			<h5>1 Month Ago</h5>
-				<div class="ui-grid-b my-breakpoint">
-				  <div class="ui-block-a"><div class="ui-body ui-body-d"><center><img src="images/leftpic.jpeg"></center></div></div>
-				  <div class="ui-block-b"><div class="ui-body ui-body-d"><center><img src="images/centerpic.gif"></center></div></div>
-				  <div class="ui-block-c"><div class="ui-body ui-body-d"><center><img src="images/rightpic.jpeg"></center></div></div>
-				</div></div>	
-		</div>
-		
-		<div class="diary_view_thumb" id="diary4">
-			<h5>1 Year Ago</h5>
-				<div class="ui-grid-b my-breakpoint">
-				  <div class="ui-block-a"><div class="ui-body ui-body-d"><center><img src="images/leftpic.jpeg"></center></div></div>
-				  <div class="ui-block-b"><div class="ui-body ui-body-d"><center><img src="images/centerpic.gif"></center></div></div>
-				  <div class="ui-block-c"><div class="ui-body ui-body-d"><center><img src="images/rightpic.jpeg"></center></div></div>
-				</div>
-		</div>	
+			<h5>mm/dd/yyyy</h5>
+			<div class="ui-grid-b">
+			    <div class="ui-block-a">
+			        <div class="ui-bar"> 
+			        	<a href="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" class="swipebox">
+			        		<img alt="alt..." src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" />
+			        	</a>
+
+			        </div>
+			    </div>
+			    <div class="ui-block-b">
+			        <div class="ui-bar">
+			        	<a href="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" class="swipebox" title="mm/dd/yyyy">
+			        		<img alt="alt..." src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" />
+			        	</a>
+			    	</div>
+			    </div>
+	   
+	   		    <div class="ui-block-c">
+			        <div class="ui-bar">
+			        	<a href="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" class="swipebox">
+			        		<img alt="alt..." src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" />	
+		        		</a>
+		        	</div>
+		    	</div>
+			</div>
+
+
+	</div>
 
 	<div data-role="footer" data-position="fixed" data-theme="b">
 		<div data-role="navbar" data-theme="a" data-iconpos="left">
@@ -243,14 +246,11 @@
 <!--PAGE COMPARISONs-->
 <div data-role="page" id="compare" data-backbtn="false">
 
-
 	<!--panel-->
 	<div data-role="panel" id="mypanel" data-position="right" data-display="reveal" data-theme="b">
 		<ul data-role="listview" data-theme="b">
     		<li data-icon="home"><a href="#home">Home</a></li>
    			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
-    		<li data-icon="user"><a href="#account">Account</a></li>
-    		<li data-icon="gear"><a href="#settings">Settings</a></li>
     		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
 		</ul></br>
 	</div><!-- /panel -->
@@ -271,35 +271,36 @@
 
 	<div data-role="content" data-theme="c">
 		<h4>COMPARISON VIEW</h3>
-		<div class="comparison_thumb">
-			<h5>1 Day Ago & 1 Week Ago</h5>
-			<div class="ui-grid-b my-breakpoint">
-				  <div class="ui-block-a"><div class="ui-body ui-body-d"><center><img src="images/leftpic.jpeg"></center></div></div>
-				  <div class="ui-block-b"><div class="ui-body ui-body-d"><center><img src="images/centerpic.gif"></center></div></div>
-				  <div class="ui-block-c"><div class="ui-body ui-body-d"><center><img src="images/rightpic.jpeg"></center></div></div>
-			</div>
-			<div class="ui-grid-b my-breakpoint">
-				  <div class="ui-block-a"><div class="ui-body ui-body-d"><center><img src="images/leftpic.jpeg"></center></div></div>
-				  <div class="ui-block-b"><div class="ui-body ui-body-d"><center><img src="images/centerpic.gif"></center></div></div>
-				  <div class="ui-block-c"><div class="ui-body ui-body-d"><center><img src="images/rightpic.jpeg"></center></div></div>
-			</div>
-		</div>
-		
-		<div class="comparison_thumb">
-			<h5>1 Day Ago & 1 Month Ago</h5>
-			<div class="ui-grid-b my-breakpoint">
-				  <div class="ui-block-a"><div class="ui-body ui-body-d"><center><img src="images/leftpic.jpeg"></center></div></div>
-				  <div class="ui-block-b"><div class="ui-body ui-body-d"><center><img src="images/centerpic.gif"></center></div></div>
-				  <div class="ui-block-c"><div class="ui-body ui-body-d"><center><img src="images/rightpic.jpeg"></center></div></div>
-			</div>
-			<div class="ui-grid-b my-breakpoint">
-				  <div class="ui-block-a"><div class="ui-body ui-body-d"><center><img src="images/leftpic.jpeg"></center></div></div>
-				  <div class="ui-block-b"><div class="ui-body ui-body-d"><center><img src="images/centerpic.gif"></center></div></div>
-				  <div class="ui-block-c"><div class="ui-body ui-body-d"><center><img src="images/rightpic.jpeg"></center></div></div>
-			</div>
-		</div>
-		</div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+				    <select name="before" data-native-menu="false">
+				        <option value="Today">Today</option>
+				        <option value="Yesterday">Yesterday</option>
+				        <option value="A Week Ago">A Week Ago</option>
+				        <option value="Two Weeks Ago">Two Weeks Ago</option>
+				        <option value="Three Weeks Ago">Three Weeks Ago</option>
+				        <option value="A Month Ago">A Month Ago</option>
+				        <option value="Two Months Ago">Two Months Ago</option>
+				    </select>
+				</div>
 
+				<div class="ui-block-b">
+				    <select name="after" data-native-menu="false">
+				        <option value="Yesterday">Yesterday</option>
+				        <option value="A Week Ago">A Week Ago</option>
+				        <option value="Two Weeks Ago">Two Weeks Ago</option>
+				        <option value="Three Weeks Ago">Three Weeks Ago</option>
+				        <option value="A Month Ago">A Month Ago</option>
+				        <option value="Two Months Ago">Two Months Ago</option>
+				    </select>
+				</div>
+			</div>
+
+		<div id="container1" class="twentytwenty-container">
+ 			 <img src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg">
+ 			 <img src="http://becksilverman.com/wp-content/uploads/2008/03/fam_20080312_0161.jpg">
+		</div>
+	</div>
 
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
 		<div data-role="navbar" data-theme="a" data-iconpos="left">
@@ -318,8 +319,6 @@
 		<ul data-role="listview" data-theme="b">
     		<li data-icon="home"><a href="#home">Home</a></li>
    			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
-    		<li data-icon="user"><a href="#account">Account</a></li>
-    		<li data-icon="gear"><a href="#settings">Settings</a></li>
     		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
 		</ul></br>
 	</div><!-- /panel -->
@@ -356,8 +355,6 @@
 		<ul data-role="listview" data-theme="b">
     		<li data-icon="home"><a href="#home">Home</a></li>
    			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
-    		<li data-icon="user"><a href="#account">Account</a></li>
-    		<li data-icon="gear"><a href="#settings">Settings</a></li>
     		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
 		</ul></br>
 	</div><!-- /panel -->
@@ -391,8 +388,6 @@
 		<ul data-role="listview" data-theme="b">
     		<li data-icon="home"><a href="#home">Home</a></li>
    			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
-    		<li data-icon="user"><a href="#account">Account</a></li>
-    		<li data-icon="gear"><a href="#settings">Settings</a></li>
     		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
 		</ul></br>
 	</div><!-- /panel -->

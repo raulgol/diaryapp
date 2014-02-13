@@ -1,0 +1,30 @@
+.ui-grid-b {
+	margin-left: -20px;
+	margin-right: -20px;
+	padding: 0px;
+	margin-top: -10px;
+}
+
+.ui-grid-b a{
+	padding: 0px;
+	margin: -20px;
+}
+.ui-block-a img {
+    max-width  : 120%;
+    max-height : 100%;
+    margin-left: 0px;
+    padding: 0px;
+}
+.ui-block-b img {
+	max-width  : 120%;
+    max-height : 100%;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+.ui-block-c img {
+    max-width  : 120%;
+    max-height : 100%;
+    margin-left: 0px;
+}
+
