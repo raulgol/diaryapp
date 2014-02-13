@@ -399,6 +399,70 @@
 	
 	<div data-role="content" data-theme="c">	
 		<h4>Reminders</h4>
+	<!--on/off button-->
+		<div>
+			<div data-role="fieldcontain" data-type="horizontal">
+				<label for="flip-5">Diary1:</label>
+				<select name="flip-5" id="flip-5" data-role="slider" data-theme="c" data-track-theme="a">
+						<option value="no">No</option>
+						<option value="yes">Yes</option>
+				</select>
+		
+			</div>
+			</div><!--/dairy1 button-->
+	
+			<!--/date selector-->
+	
+
+
+	   <fieldset data-role="controlgroup" data-type="horizontal">
+		   <legend>Set Reminder time </legend>
+
+	    <label for="select-choice-month">Month</label>
+		<select name="select-choice-week" id="select-choice-week">
+			<option>Week</option>
+			<option value="Sunday">Sunday</option>
+			<option value="Monday">Monday</option>
+			<option value="Tuesday">Tuesday</option>
+			<option value="Wednesday">Wednesday</option>
+			<option value="Thursday">Thursday</option>
+			<option value="Friday">Friday</option>
+			<option value="Saturday">Saturday</option>
+			<!-- etc. -->
+		</select>
+
+
+
+		<label for="select-choice-time">Year</label>
+		<select name="select-choice-time" id="select-choice-time">
+			<option>Time</option>
+	
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<!-- etc. -->
+		</select>
+		<label for ="select-choice-AM-PM">Time of Day </label>
+		<select name="select-choice-AM-PM" id="select-choice-am-pm"> 
+			<option value="select-choice-am-pm">AM/PM</option>
+			<option> AM</option>
+			<option>PM </option>
+
+
+		</select>
+	
+		</fieldset> <!--/date selector field-->
+	</div>
+
 	</div><!-- /content -->
 
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
