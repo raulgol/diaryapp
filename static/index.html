@@ -9,20 +9,20 @@
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
-	<link rel="stylesheet" href="custom.css">
+	<link rel="stylesheet" href="static/custom.css">
 
 	<!--swipebox-->
 	<link rel="stylesheet" href="source/swipebox.css">
-	<script src="lib/jquery-2.0.3.js"></script>
+	<script src="static/lib/jquery-2.0.3.js"></script>
 	<script src="source/jquery.swipebox.js"></script>
 	<!--/swipebox-->
 
 	<!--twentytwenty-->
-	<script src="js/jquery.event.move.js"></script>
-	<script src="js/jquery.twentytwenty.js"></script>
-	<link rel="stylesheet" href="css/foundation.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
-	<link rel="stylesheet" href="css/twentytwenty.css"/>
+	<script src="static/lib/js/jquery.event.move.js"></script>
+	<script src="static/lib/js/jquery.twentytwenty.js"></script>
+	<link rel="stylesheet" href="static/lib/css/foundation.css"/>
+	<link rel="stylesheet" href="static/lib/css/style.css"/>
+	<link rel="stylesheet" href="static/lib/css/twentytwenty.css"/>
 	<!--/twentytwenty-->
 
 </head> 
@@ -117,7 +117,7 @@
 	<div data-role="panel" id="mypanel" data-position="right" data-display="reveal" data-theme="b">
 		<div data-role="button" data-icon="cancel"></div>
 		<ul data-role="listview" data-theme="b">
-    		<li data-icon="home"><a href="#">Home</a></li>
+    		<li data-icon="home"><a href="#">Home</a></li>   		
    			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
     		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
 		</ul></br>
@@ -337,7 +337,7 @@
 	</div>
 
 	<div data-role="content" data-theme="c">
-		<h3>Add Photo to Diary</h3>
+		<h3>Add New Photo</h3>
 	<!--IMAGE CAPTURE AND UPLOAD VIA FORM-->
 		<form action="upload.htm" method="post" enctype="multipart/form-data">
  			<input type="file" accept="image/*" capture>
@@ -407,7 +407,7 @@
 	
 	<div data-role="content" data-theme="c">	
 	<!--on/off button-->
-		<div class="ui-grid-a">
+		<div class="ui-grid-a" id="fuckthis">
 			<div class="ui-block-a" data-role="fieldcontain" data-type="horizontal">
 				<label for="flip-5"><h5>Diary 1:</h5></label>
 				</div>
@@ -466,13 +466,12 @@
 			<option value>AM</option>
 			<option value>PM</option>
 		</select>
-		
+
 		</fieldset> <!--/date selector field-->
-	
 	
 	<div  class="ui-grid-a"> 		
 		<fieldset data-role="controlgroup" data-type="horizontal" >
-			<legend>via:</legend>
+			<legend>Via:</legend>
 				<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1"/>
 				<label for="radio-choice-1">text</label>
 
