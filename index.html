@@ -160,7 +160,7 @@
 
 
 <!--FORGOT PASSWORD PROMPT-->
-	<div data-role="page" id="forgotpasswordprompt">
+<div data-role="page" id="forgotpasswordprompt">
 	<div data-role="header" data-theme="b">
 		<h6>Forgot your Password?</h6>
 	</div>
@@ -168,8 +168,15 @@
 		<center><h4>Not a problem!</h4>
 			<p>Give us your email and we'll send you a message on how to retrieve your account.</center>
 			<input type="text" name="email" placeholder="Email">
-			<a href="#login" data-role="button" data-theme="c" data-transition="fade">Send</a>
-	</div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<a href="#home" data-role="button" data-theme="c" data-transition="fade">Close</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="#login" data-role="button" data-theme="a" data-transition="fade">Send</a>
+				</div>
+			</div>
+		</div>
 </div>
 <!--.FORGOT PASSWORD PROMPT-->
 
@@ -295,12 +302,13 @@
 				    </select>
 				</div>
 			</div>
-
+	<div data-role="container">
 		<div id="container1" class="twentytwenty-container">
  			 <img src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg">
  			 <img src="http://becksilverman.com/wp-content/uploads/2008/03/fam_20080312_0161.jpg">
 		</div>
 	</div>
+</div>
 
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
 		<div data-role="navbar" data-theme="a" data-iconpos="left">
@@ -393,50 +401,51 @@
 	</div><!-- /panel -->
 
 	<div data-role="header" data-theme="b" data-add-back-btn="true">
-		<h1>TR&#916;CK</h1>
+		<h1>Reminders</h1>
 		<a href="#mypanel" data-role="button" data-icon="bars" data-iconpos="notext" class="showMenu ui-btn-right"></a>
 	</div>
 	
 	<div data-role="content" data-theme="c">	
-		<h4>Reminders</h4>
 	<!--on/off button-->
-		<div>
-			<div data-role="fieldcontain" data-type="horizontal">
-				<label for="flip-5">Diary1:</label>
-				<select name="flip-5" id="flip-5" data-role="slider" data-theme="c" data-track-theme="a">
+		<div class="ui-grid-a">
+			<div class="ui-block-a" data-role="fieldcontain" data-type="horizontal">
+				<label for="flip-5"><h5>Diary 1:</h5></label>
+				</div>
+			<div class="ui-block-b">
+				<select name="flip-5" id="flip-5" data-role="slider" data-theme="c" data-track-theme="a" data-mini="true">
 						<option value="no">No</option>
 						<option value="yes">Yes</option>
 				</select>
-		
 			</div>
-			</div><!--/dairy1 button-->
-	
+		</div><!--/dairy1 button-->
 			<!--/date selector-->
 	
+	   <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+		   <legend><p>Set Reminder Time:</p></legend>
 
-
-	   <fieldset data-role="controlgroup" data-type="horizontal">
-		   <legend>Set Reminder time </legend>
-
-	    <label for="select-choice-month">Month</label>
-		<select name="select-choice-week" id="select-choice-week">
-			<option>Week</option>
-			<option value="Sunday">Sunday</option>
-			<option value="Monday">Monday</option>
-			<option value="Tuesday">Tuesday</option>
-			<option value="Wednesday">Wednesday</option>
-			<option value="Thursday">Thursday</option>
-			<option value="Friday">Friday</option>
-			<option value="Saturday">Saturday</option>
+	    	<label for="select-choice-month">Month</label>
+			<select name="select-choice-week" id="select-choice-week">
+				<option value="Daily">Daily</option>
+				<option value="Weekly">Weekly</option>
+				<option value="Monthly">Monthly</option>
 			<!-- etc. -->
+			</select>
+
+		<label for"select-choice-day">Day</label>
+		<select name="select-choice-day" id="select-choice-day">
+			<option>Day</option>
+			<option value="Sun">Sunday</option>
+			<option value="Mon">Monday</option>
+			<option value="Tues">Tuesday</option>
+			<option value="Wed">Wednesday</option>
+			<option value="Thurs">Thursday</option>
+			<option value="Fri">Friday</option>
+			<option value="Sat">Saturday</option>
 		</select>
-
-
 
 		<label for="select-choice-time">Year</label>
 		<select name="select-choice-time" id="select-choice-time">
 			<option>Time</option>
-	
 			<option value="1">1</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -451,21 +460,19 @@
 			<option value="12">12</option>
 			<!-- etc. -->
 		</select>
-		<label for ="select-choice-AM-PM">Time of Day </label>
-		<select name="select-choice-AM-PM" id="select-choice-am-pm"> 
-			<option value="select-choice-am-pm">AM/PM</option>
-			<option> AM</option>
-			<option>PM </option>
 
-
+		<label for="select-choice-ampm">AM</label>
+		<select name="select-choice-ampm" id="select-choice-time">
+			<option value>AM</option>
+			<option value>PM</option>
 		</select>
-	
+		
 		</fieldset> <!--/date selector field-->
-	</div>
+
 
 	</div><!-- /content -->
 
-	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
+	<div data-role="footer" data-position="fixed" data-theme="b">
 		<div data-role="navbar" data-theme="a" data-iconpos="left">
 			<ul>
 				<li><a href="#home" data-transition="none" data-icon="carat-u">Close</a></li>
@@ -476,70 +483,6 @@
 </div><!-- /page -->
 
 
-<!--SETTINGS-->
-<div data-role="page" id="settings" data-add-back-btn="true">
-	<!--panel-->
-	<div data-role="panel" id="mypanel" data-position="right" data-display="reveal" data-theme="b">
-		<ul data-role="listview" data-theme="b">
-    		<li data-icon="home"><a href="#home">Home</a></li>
-   			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
-    		<li data-icon="user"><a href="#account">Account</a></li>
-    		<li data-icon="gear"><a href="#">Settings</a></li>
-    		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
-		</ul></br>
-	</div><!-- /panel -->
-
-	<div data-role="header" data-theme="b" data-add-back-btn="true">
-		<h1>TR&#916;CK</h1>
-		<a href="#mypanel" data-role="button" data-icon="bars" data-iconpos="notext" class="showMenu ui-btn-right"></a>
-	</div>
-	
-	<div data-role="content" data-theme="c">	
-		<h4>Settings</h4>
-	</div><!-- /content -->
-
-	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
-		<div data-role="navbar" data-theme="a" data-iconpos="left">
-			<ul>
-				<li><a href="#home" data-transition="none" data-icon="carat-u">Close</a></li>
-			</ul>
-		</div>
-	</div><!-- /footer -->
-
-</div><!-- /page -->
-
-
-<!--ACCOUNT-->
-<div data-role="page" id="account" data-add-back-btn="true">
-	<!--panel-->
-	<div data-role="panel" id="mypanel" data-position="right" data-display="reveal" data-theme="b">
-		<ul data-role="listview" data-theme="b">
-    		<li data-icon="home"><a href="#home">Home</a></li>
-   			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
-    		<li data-icon="user"><a href="#">Account</a></li>
-    		<li data-icon="gear"><a href="#settings">Settings</a></li>
-    		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
-		</ul></br>
-	</div><!-- /panel -->
-
-	<div data-role="header" data-theme="b" data-add-back-btn="true">
-		<h1>TR&#916;CK</h1>
-		<a href="#mypanel" data-role="button" data-icon="bars" data-iconpos="notext" class="showMenu ui-btn-right"></a>
-	</div>
-	
-	<div data-role="content" data-theme="c">	
-		<h4>Account</h4>
-	</div><!-- /content -->
-
-	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
-		<div data-role="navbar" data-theme="a" data-iconpos="left">
-			<ul>
-				<li><a href="#home" data-transition="none" data-icon="carat-u">Close</a></li>
-			</ul>
-		</div>
-	</div><!-- /footer -->
-
-</div><!-- /page -->
 
 
 </body>

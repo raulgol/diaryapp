@@ -1,3 +1,12 @@
+.fieldset {
+    width: 80%;
+}
+
+.ui-grid-a .ui-block-b {
+    margin-top: -7px;   
+    margin-bottom: -15px; 
+}
+
 .ui-grid-b {
 	margin-left: -20px;
 	margin-right: -20px;
@@ -10,21 +19,24 @@
 	margin: -20px;
 }
 .ui-block-a img {
-    max-width  : 120%;
+    max-width  : 110%;
     max-height : 100%;
     margin-left: 0px;
     padding: 0px;
 }
 .ui-block-b img {
-	max-width  : 120%;
+	max-width  : 110%;
     max-height : 100%;
     margin-left: 0px;
     padding: 0px;
 }
 
 .ui-block-c img {
-    max-width  : 120%;
+    max-width  : 110%;
     max-height : 100%;
     margin-left: 0px;
 }
 
+#ampm {
+    width: 80px;
+}

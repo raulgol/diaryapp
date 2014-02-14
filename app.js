@@ -6,3 +6,4 @@ jQuery(function($) {
 $(window).load(function() {
   $(".twentytwenty-container").twentytwenty();
 });
+
