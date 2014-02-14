@@ -1,0 +1,500 @@
+<!DOCTYPE html> 
+
+<html> 
+	<head> 
+	<title>TR&#916;CK</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css"/>
+	<link rel="stylesheet" href="public/css/index.css" />
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="custom.css">
+
+	<!--swipebox-->
+	<link rel="stylesheet" href="source/swipebox.css">
+	<script src="lib/jquery-2.0.3.js"></script>
+	<script src="source/jquery.swipebox.js"></script>
+	<!--/swipebox-->
+
+	<!--twentytwenty-->
+	<script src="js/jquery.event.move.js"></script>
+	<script src="js/jquery.twentytwenty.js"></script>
+	<link rel="stylesheet" href="css/foundation.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/twentytwenty.css"/>
+	<!--/twentytwenty-->
+
+</head> 
+<body> 
+
+
+<!--LOGIN-->
+<div data-role="page" id="login" data-add-back-btn="false">
+	<!--Login Header-->
+	<div data-role="header" data-theme="b">
+		<h1>TR&#916;CK</h1>
+		<a href="#info" data-rel="dialog" data-icon="info" data-iconpos="notext" class="ui-btn-right"></a>
+	</div>
+	<!--/Login Header-->
+
+	<!--Login Content-->
+	<div data-role="content" data-theme="c">	
+		<!--Logo--><center><img src="images/Trackerlogo.png" /></br></br>
+		<!--Login Form-->
+		<form method="PUT" action="api/auth" data-ajax="false">
+    		<input type="text" name="login_username" id="login_username" placeholder="username"/>
+    		<input type="password" name="login_password" id="login_password" placeholder="password"/>
+		</form>		
+		<a href="#home" data-role="button">Sign In</a>
+		<a href="#forgotpasswordprompt" data-rel="dialog" data-transition="fade">forgot your password?</a>
+	</div>
+	<!--/Login Content -->
+
+	<!--Login Footer-->
+	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b" >
+		<div data-role="navbar" data-theme="a" data-iconpos="left">
+			<ul>
+				<li><a href="#register" data-transition="slideup" data-icon="carat-u">Create an Account</a></li>
+			</ul>
+		</div>
+	</div><!--/Login Footer -->
+
+</div><!-- /page -->
+
+<!--REGISTER/SIGN UP-->
+<div data-role="page" id="register" data-add-back-btn="false">
+	<!--Header-->
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Create an Account</h1>
+				<a href="#info" data-icon="info" data-iconpos="notext" class="ui-btn-right"></a>
+	</div>
+	<!--/Header-->
+
+	<!--Content-->
+	<div data-role="content" data-theme="c">
+		<h3>Registration Details</h3>
+		<!--Registration form-->
+		<input type="text" required name="first_name" placeholder="First Name">
+		<input type="text" required name="last_name" placeholder="Last Name">
+		<input type="text" required name="username" placeholder="Username">
+		<input type="email" required name="email" placeholder="Email">
+		<input type="password" required name="password" placeholder="Password">
+		<input type="password" required name="confirm_password" placeholder="Confirm Password">
+		<a href="#login" data-role="button" data-transition="slideup" data-direction="reverse">Submit</a>
+	</div>
+	<!--/Content-->
+
+	<!--Footer-->
+	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="a" data-iconpos="left">
+			<ul>
+				<li><a href="#login" class="ui-btn-active ui-state-persist" data-transition="slideup" data-direction="reverse" data-icon="carat-d">Cancel</a></li>
+			</ul>
+		</div> 
+	</div>
+	<!--/Footer -->
+</div>
+<!--/REGISTRATION/SIGN UP-->
+
+<!--INFO PAGE-->
+<div data-role="page" id="info" data-add-back-btn="true">
+	<div data-role="header" data-theme="b">
+		<h3>Info</h3>
+	</div>
+	<div data-role="content" data-theme="c">
+		<p>There's going to be relevant info here about the app / developers / contact /etc.</p>
+		<a href="index.html" data-role="button" data-theme="c">close</a>
+	</div>
+</div>
+<!--INFO PAGE-->
+
+
+<!--HOME-->
+<div data-role="page" id="home" data-add-back-btn="false">
+	
+	<!--panel-->
+	<div data-role="panel" id="mypanel" data-position="right" data-display="reveal" data-theme="b">
+		<div data-role="button" data-icon="cancel"></div>
+		<ul data-role="listview" data-theme="b">
+    		<li data-icon="home"><a href="#">Home</a></li>
+   			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
+    		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
+		</ul></br>
+	</div><!-- /panel -->
+
+	<div data-role="header" data-theme="b">
+		<a href="#signoutprompt" data-rel="dialog" data-icon="carat-l" data-iconpos="notext" class="ui-btn-left" data-transition="none" data-direction="reverse"></a>	
+		<h1>TR&#916;CK</h1>
+		<a href="#mypanel" data-icon="bars" data-iconpos="notext" class="showMenu"></a>
+	</div>
+	
+	<div data-role="content" data-theme="c">	
+		<h4>My Diaries</h4>
+		<a href="#diary" data-role="button" data-theme="b" data-transition="slide" data-icon="book"> Diary 1 </a>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="a" data-iconpos="left">
+			<ul>
+				<li><a href="#newdiary" data-transition="slideup" data-icon="carat-u">Create New Diary</a></li>
+			</ul>
+		</div>
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+
+
+<!--SIGNOUT PROMPT-->
+<div data-role="page" id="signoutprompt">
+	<div data-role="header" data-theme="b">
+		<h3>Sign Out?</h3>
+	</div>
+	<div data-role="content" data-theme="c">
+		Are you sure you want to sign out?
+			<a href="#login" data-role="button" data-theme="b">Yes, sign me out</a>
+			<a href="#home" data-role="button" data-theme="c">Cancel</a>
+	</div>
+</div>
+<!--/SIGNOUT PROMPT-->
+
+
+<!--FORGOT PASSWORD PROMPT-->
+<div data-role="page" id="forgotpasswordprompt">
+	<div data-role="header" data-theme="b">
+		<h6>Forgot your Password?</h6>
+	</div>
+	<div data-role="content" data-theme="c">
+		<center><h4>Not a problem!</h4>
+			<p>Give us your email and we'll send you a message on how to retrieve your account.</center>
+			<input type="text" name="email" placeholder="Email">
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<a href="#home" data-role="button" data-theme="c" data-transition="fade">Close</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="#login" data-role="button" data-theme="a" data-transition="fade">Send</a>
+				</div>
+			</div>
+		</div>
+</div>
+<!--.FORGOT PASSWORD PROMPT-->
+
+
+<!--DIARY-->
+<div data-role="page" id="diary">
+
+	<!--panel-->
+	<div data-role="panel" id="mypanel" data-position="right" data-display="reveal" data-theme="b">
+		<ul data-role="listview" data-theme="b">
+    		<li data-icon="home"><a href="#home">Home</a></li>
+   			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
+    		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
+		</ul></br>
+	</div><!-- /panel -->
+
+	<div data-role="header" data-theme="b" data-backbtn="false">
+		<a href="#home" data-icon="carat-l" data-iconpos="notext" class="ui-btn-left" data-transition="slide" data-direction="reverse"></a>
+		
+		<h1>Diary 1</h1>
+		
+		<a href="#mypanel" data-icon="bars" data-iconpos="notext" class="ui-btn-right" data-backbtn="false"></a>
+
+		<div data-role="navbar" data-theme="a">
+			<ul>
+				<li><a href="#" data-role="button" class="ui-btn-active ui-state-persist"> Diary View </a></li>
+				<li><a href="#compare" data-role="button" data-transition="none"> Comparison View</a></li>
+			</ul>
+		</div><!-- /header -->
+	</div>
+	
+	<div data-role="content" data-theme="c">	
+		<h4>DIARY VIEW</h4>
+			<h5>mm/dd/yyyy</h5>
+			<div class="ui-grid-b">
+			    <div class="ui-block-a">
+			        <div class="ui-bar"> 
+			        	<a href="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" class="swipebox">
+			        		<img alt="alt..." src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" />
+			        	</a>
+
+			        </div>
+			    </div>
+			    <div class="ui-block-b">
+			        <div class="ui-bar">
+			        	<a href="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" class="swipebox" title="mm/dd/yyyy">
+			        		<img alt="alt..." src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" />
+			        	</a>
+			    	</div>
+			    </div>
+	   
+	   		    <div class="ui-block-c">
+			        <div class="ui-bar">
+			        	<a href="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" class="swipebox">
+			        		<img alt="alt..." src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" />	
+		        		</a>
+		        	</div>
+		    	</div>
+			</div>
+
+
+	</div>
+
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="a" data-iconpos="left">
+			<ul>
+				<li><a href="#newphoto" data-transition="slideup" data-icon="carat-u">Add New Photo</a></li>
+			</ul>
+		</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!--PAGE COMPARISONs-->
+<div data-role="page" id="compare" data-backbtn="false">
+
+	<!--panel-->
+	<div data-role="panel" id="mypanel" data-position="right" data-display="reveal" data-theme="b">
+		<ul data-role="listview" data-theme="b">
+    		<li data-icon="home"><a href="#home">Home</a></li>
+   			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
+    		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
+		</ul></br>
+	</div><!-- /panel -->
+
+
+	<div data-role="header" data-theme="b" data-back-btn-text="false">
+		<a href="#home" data-icon="carat-l" data-iconpos="notext" class="ui-btn-left" data-transition="slide" data-direction="reverse"></a>
+		<h1>Diary 1</h1>
+				<a href="#mypanel" data-icon="bars" data-iconpos="notext" class="ui-btn-right"></a>
+
+		<div data-role="navbar" data-theme="a">
+			<ul>
+				<li><a href="#diary" data-role="button" data-transition="none"> Diary View</a></li>
+				<li><a href="#" data-role="button" class="ui-btn-active ui-state-persist"> Comparison View </a></li>
+			</ul>
+		</div><!-- /header -->
+	</div>
+
+	<div data-role="content" data-theme="c">
+		<h4>COMPARISON VIEW</h3>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+				    <select name="before" data-native-menu="false">
+				        <option value="Today">Today</option>
+				        <option value="Yesterday">Yesterday</option>
+				        <option value="A Week Ago">A Week Ago</option>
+				        <option value="Two Weeks Ago">Two Weeks Ago</option>
+				        <option value="Three Weeks Ago">Three Weeks Ago</option>
+				        <option value="A Month Ago">A Month Ago</option>
+				        <option value="Two Months Ago">Two Months Ago</option>
+				    </select>
+				</div>
+
+				<div class="ui-block-b">
+				    <select name="after" data-native-menu="false">
+				        <option value="Yesterday">Yesterday</option>
+				        <option value="A Week Ago">A Week Ago</option>
+				        <option value="Two Weeks Ago">Two Weeks Ago</option>
+				        <option value="Three Weeks Ago">Three Weeks Ago</option>
+				        <option value="A Month Ago">A Month Ago</option>
+				        <option value="Two Months Ago">Two Months Ago</option>
+				    </select>
+				</div>
+			</div>
+	<div data-role="container">
+		<div id="container1" class="twentytwenty-container">
+ 			 <img src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg">
+ 			 <img src="http://becksilverman.com/wp-content/uploads/2008/03/fam_20080312_0161.jpg">
+		</div>
+	</div>
+</div>
+
+	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="a" data-iconpos="left">
+			<ul>
+				<li><a href="#newphoto" data-transition="slideup" data-icon="carat-u">Add New Photo</a></li>
+			</ul>
+		</div>
+	</div><!-- /footer -->
+</div>
+
+
+<!--PAGE NEW PHOTO-->
+<div data-role="page" id="newphoto" data-add-back-btn="true">
+		<!--panel-->
+	<div data-role="panel" id="mypanel" data-position="right" data-display="reveal" data-theme="b">
+		<ul data-role="listview" data-theme="b">
+    		<li data-icon="home"><a href="#home">Home</a></li>
+   			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
+    		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
+		</ul></br>
+	</div><!-- /panel -->
+
+	<div data-role="header" data-theme="b"  data-add-back-btn="true">
+		<h1>Add New Photo</h1>
+				<a href="#mypanel" data-icon="bars" data-role="button" class="showMenu ui-btn-right" data-iconpos="notext"></a>
+	</div>
+
+	<div data-role="content" data-theme="c">
+		<h3>Add Photo to Diary</h3>
+	<!--IMAGE CAPTURE AND UPLOAD VIA FORM-->
+		<form action="upload.htm" method="post" enctype="multipart/form-data">
+ 			<input type="file" accept="image/*" capture>
+  			<input type="submit" value="Upload">
+		</form>
+	<!--END IMAGE CAPTURE AND UPLOAD-->
+	</div>
+
+	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="a" data-iconpos="left">
+			<ul>
+				<li><a href="#diary" class="ui-btn-active ui-state-persist" data-transition="slideup" data-direction="reverse" data-icon="carat-d">Done</a></li>
+			</ul>
+		</div> 
+	</div><!-- /footer -->
+</div>
+
+
+<!--ADD DIARY-->
+<div data-role="page" id="newdiary">
+		<!--panel-->
+	<div data-role="panel" id="mypanel" data-position="right" data-display="reveal" data-theme="b">
+		<ul data-role="listview" data-theme="b">
+    		<li data-icon="home"><a href="#home">Home</a></li>
+   			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
+    		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
+		</ul></br>
+	</div><!-- /panel -->
+
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Create New Diary</h1>
+				<a href="#mypanel" data-icon="bars" data-iconpos="notext" class="ui-btn-right"></a>
+	</div>
+	<div data-role="content" data-theme="c">
+		<h3>New Diary Details</h3>
+		<h4>Diary Name</h4><input type="text" name="first_name">
+		<a href="#home" data-role="button" data-transition="slideup" data-direction="reverse">Create</a>
+
+	</div>
+
+	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="a" data-iconpos="left">
+			<ul>
+				<li><a href="#home" class="ui-btn-active ui-state-persist" data-transition="slideup" data-direction="reverse" data-icon="carat-d">Cancel</a></li>
+			</ul>
+		</div> 
+	</div><!-- /footer -->
+</div>
+<!--End ADD DIARY-->
+
+
+<!--REMINDERS-->
+<div data-role="page" id="reminders" data-add-back-btn="true">
+	<!--panel-->
+	<div data-role="panel" id="mypanel" data-position="right" data-display="reveal" data-theme="b">
+		<ul data-role="listview" data-theme="b">
+    		<li data-icon="home"><a href="#home">Home</a></li>
+   			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
+    		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
+		</ul></br>
+	</div><!-- /panel -->
+
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Reminders</h1>
+		<a href="#mypanel" data-role="button" data-icon="bars" data-iconpos="notext" class="showMenu ui-btn-right"></a>
+	</div>
+	
+	<div data-role="content" data-theme="c">	
+	<!--on/off button-->
+		<div class="ui-grid-a">
+			<div class="ui-block-a" data-role="fieldcontain" data-type="horizontal">
+				<label for="flip-5"><h5>Diary 1:</h5></label>
+				</div>
+			<div class="ui-block-b">
+				<select name="flip-5" id="flip-5" data-role="slider" data-theme="c" data-track-theme="a" data-mini="true">
+						<option value="no">No</option>
+						<option value="yes">Yes</option>
+				</select>
+			</div>
+		</div><!--/dairy1 button-->
+			<!--/date selector-->
+	
+	   <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+		   <legend><p>Set Reminder Time:</p></legend>
+
+	    	<label for="select-choice-month">Month</label>
+			<select name="select-choice-week" id="select-choice-week">
+				<option value="Daily">Daily</option>
+				<option value="Weekly">Weekly</option>
+				<option value="Monthly">Monthly</option>
+			<!-- etc. -->
+			</select>
+
+		<label for"select-choice-day">Day</label>
+		<select name="select-choice-day" id="select-choice-day">
+			<option>Day</option>
+			<option value="Sun">Sunday</option>
+			<option value="Mon">Monday</option>
+			<option value="Tues">Tuesday</option>
+			<option value="Wed">Wednesday</option>
+			<option value="Thurs">Thursday</option>
+			<option value="Fri">Friday</option>
+			<option value="Sat">Saturday</option>
+		</select>
+
+		<label for="select-choice-time">Year</label>
+		<select name="select-choice-time" id="select-choice-time">
+			<option>Time</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<!-- etc. -->
+		</select>
+
+		<label for="select-choice-ampm">AM</label>
+		<select name="select-choice-ampm" id="select-choice-ampm">
+			<option value>AM</option>
+			<option value>PM</option>
+		</select>
+		
+		</fieldset> <!--/date selector field-->
+	
+	
+	<div  class="ui-grid-a"> 		
+		<fieldset data-role="controlgroup" data-type="horizontal" >
+			<legend>via:</legend>
+				<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1"/>
+				<label for="radio-choice-1">text</label>
+
+				<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
+				<label for="radio-choice-2">email</label>
+		</fieldset>
+
+	</div> <!--/text/email-->
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="a" data-iconpos="left">
+			<ul>
+				<li><a href="#home" data-transition="none" data-icon="carat-u">Close</a></li>
+			</ul>
+		</div>
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+
+
+
+
+</body>
+</html>

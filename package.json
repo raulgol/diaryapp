@@ -1,28 +1,20 @@
 {
-  "name": "tcr-track",
+  "name": "cs147-lab-1",
+  "description": "Serving static content via html files",
   "version": "0.0.1",
-  "description": "Tracking Diary Application",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "author": "CS147 Staff <cs147@cs.stanford.edu>",
+
   "repository": {
-    "type": "git",
-    "url": "https://github.com/rebeccawalsh/diaryapp.git"
+  	"type": "git",
+  	"url": "https://github.com/StanfordHCI/cs147"
   },
-  "keywords": [
-    "health",
-    "diary",
-    "application"
-  ],
-  "author": "Carla Sun",
-  "license": "None",
-  "bugs": {
-    "url": "https://github.com/rebeccawalsh/diaryapp/issues"
-  },
-  "homepage": "https://github.com/rebeccawalsh/diaryapp",
+  "license": "MIT",
+
+  "main": "server.js",
   "dependencies": {
-    "logfmt": "~0.20.0",
-    "express": "~3.4.8"
+    "express": "3.x"
+  },
+  "engines": {
+  	"node": "0.10.x"
   }
 }

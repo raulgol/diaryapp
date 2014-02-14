@@ -1,0 +1,28 @@
+.diary_view_thumb img{
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.comparison_thumb img{
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media all and (max-width: 5em) {
+    .my-breakpoint .ui-block-a,
+    .my-breakpoint .ui-block-b {margin:0px; padding:0px;}
+    .my-breakpoint .ui-block-c,
+    .my-breakpoint .ui-block-d ,
+    .my-breakpoint .ui-block-e {
+      width: 100%;
+      float:none;
+    }
+  }
+ 
+@media all and (min-width: 1em) {
+    .my-breakpoint.ui-grid-b .ui-block-a { width: 33.33%; margin:0px;}
+    .my-breakpoint.ui-grid-b .ui-block-b { width: 33.33%; margin:0px;}
+    .my-breakpoint.ui-grid-b .ui-block-c { width: 33.33%; margin:0px;}
+  }

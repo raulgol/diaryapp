@@ -1,4 +1,4 @@
-diaryapp
-========
+Lab 2
+====
 
-COGS 120 Diary App Winter 2014
+Lab 2 introduces you to static HTML, CSS, and Bootstrap.
