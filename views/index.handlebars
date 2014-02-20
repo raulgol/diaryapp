@@ -36,11 +36,14 @@
 		<h1>TR&#916;CK</h1>
 		<a href="#info" data-rel="dialog" data-icon="info" data-iconpos="notext" class="ui-btn-right"></a>
 	</div>
+</div>
 	<!--/Login Header-->
 
 	<!--Login Content-->
-	<div data-role="content" data-theme="c">	
-		<!--Logo--><center><img src="images/Trackerlogo.png" /></br></br>
+<div data-role="content" data-theme="c">	
+		<!--Logo--><center><img src="images/Trackerlogo.png" />
+		</br>
+		<br/>
 		<!--Login Form-->
 		<form method="PUT" action="api/auth" data-ajax="false">
     		<input type="text" name="login_username" id="login_username" placeholder="username"/>
@@ -48,7 +51,8 @@
 		</form>		
 		<a href="#home" data-role="button">Sign In</a>
 		<a href="#forgotpasswordprompt" data-rel="dialog" data-transition="fade">forgot your password?</a>
-	</div>
+</div>
+
 	<!--/Login Content -->
 
 	<!--Login Footer-->
@@ -279,7 +283,7 @@
 	</div>
 
 	<div data-role="content" data-theme="c">
-		<h4>COMPARISON VIEW</h3>
+		<h4>COMPARISON VIEW</h4>
 			<div class="ui-grid-a">
 				<div class="ui-block-a">
 				    <select name="before" data-native-menu="false">
@@ -330,8 +334,10 @@
     		<li data-icon="home"><a href="#home">Home</a></li>
    			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
     		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
-		</ul></br>
+		</ul></br/>
 	</div><!-- /panel -->
+
+		<!-- /content-->
 
 	<div data-role="header" data-theme="b"  data-add-back-btn="true">
 		<h1>Add New Photo</h1>
@@ -342,7 +348,7 @@
 		<h3>Add New Photo</h3>
 	<!--IMAGE CAPTURE AND UPLOAD VIA FORM-->
 		<form action="upload.htm" method="post" enctype="multipart/form-data">
- 			<input type="file" accept="image/*" capture>
+ 			<input type="file" accept="image/*">
   			<input type="submit" value="Upload">
 		</form>
 	<!--END IMAGE CAPTURE AND UPLOAD-->
@@ -397,10 +403,10 @@
 	<!--panel-->
 	<div data-role="panel" id="mypanel" data-position="right" data-display="reveal" data-theme="b">
 		<ul data-role="listview" data-theme="b">
-    		<li data-icon="home"><a href="#home">Home</a></li>
+    		<li data- icon="home"><a href="#home">Home</a></li>
    			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
     		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
-		</ul></br>
+		</ul><br/>
 	</div><!-- /panel -->
 
 	<div data-role="header" data-theme="b" data-add-back-btn="true">
@@ -416,8 +422,8 @@
 				</div>
 			<div class="ui-block-b">
 				<select name="flip-5" id="flip-5" data-role="slider" data-theme="c" data-track-theme="a" data-mini="true">
-						<option value="no">No</option>
-						<option value="yes">Yes</option>
+						<option value="off">Off</option>
+						<option value="on">On</option>
 				</select>
 			</div>
 		</div><!--/dairy1 button-->
