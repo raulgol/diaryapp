@@ -12,9 +12,9 @@
 	<link href="/css/custom.css" rel="stylesheet">
 
 	<!--swipebox-->
-	<link href="/css/swipebox.css" rel="stylesheet" >
-	<script src="/js/jquery-2.0.3.min.js"></script>
-	<script src="/js/jquery.swipebox.js"></script>
+	<link rel="stylesheet" type="text/css" href="public/css/swipebox.css">
+	<script src="public/js/jquery-2.0.3.min.js"></script>
+	<script src="public/js/source/jquery.swipebox.js"></script>
 	<!--/swipebox-->
 
 	<!--twentytwenty-->
@@ -24,7 +24,6 @@
 	<link href="/css/style.css" rel="stylesheet">
 	<link href="/css/twentytwenty.css" rel="stylesheet">
 	<!--/twentytwenty-->
-
 </head> 
 <body> 
 
@@ -36,14 +35,12 @@
 		<h1>TR&#916;CK</h1>
 		<a href="#info" data-rel="dialog" data-icon="info" data-iconpos="notext" class="ui-btn-right"></a>
 	</div>
-</div>
 	<!--/Login Header-->
 
 	<!--Login Content-->
-<div data-role="content" data-theme="c">	
+	<div data-role="content" data-theme="c">	
 		<!--Logo--><center><img src="images/Trackerlogo.png" />
-		</br>
-		<br/>
+
 		<!--Login Form-->
 		<form method="PUT" action="api/auth" data-ajax="false">
     		<input type="text" name="login_username" id="login_username" placeholder="username"/>
@@ -51,7 +48,7 @@
 		</form>		
 		<a href="#home" data-role="button">Sign In</a>
 		<a href="#forgotpasswordprompt" data-rel="dialog" data-transition="fade">forgot your password?</a>
-</div>
+	</div>
 
 	<!--/Login Content -->
 
@@ -219,27 +216,21 @@
 			<h5>mm/dd/yyyy</h5>
 			<div class="ui-grid-b">
 			    <div class="ui-block-a">
-			        <div class="ui-bar"> 
-			        	<a href="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" class="swipebox">
-			        		<img alt="alt..." src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" />
-			        	</a>
-
-			        </div>
+		        	<a href="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" class="swipebox">
+		        		<img alt="alt..." src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" />
+		        	</a>
 			    </div>
+
 			    <div class="ui-block-b">
-			        <div class="ui-bar">
-			        	<a href="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" class="swipebox" title="mm/dd/yyyy">
-			        		<img alt="alt..." src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" />
-			        	</a>
-			    	</div>
+		        	<a href="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" class="swipebox" title="mm/dd/yyyy">
+		        		<img alt="alt..." src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" />
+		        	</a>
 			    </div>
 	   
 	   		    <div class="ui-block-c">
-			        <div class="ui-bar">
-			        	<a href="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" class="swipebox">
-			        		<img alt="alt..." src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" />	
-		        		</a>
-		        	</div>
+		        	<a href="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" class="swipebox">
+		        		<img alt="alt..." src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" />	
+	        		</a>
 		    	</div>
 			</div>
 
