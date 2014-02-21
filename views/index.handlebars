@@ -215,7 +215,7 @@
 	<div data-role="content" data-theme="c">	
 		<h4>DIARY VIEW</h4>
 			<h5>mm/dd/yyyy</h5>
-			<div class="ui-grid-b">
+			<div class="ui-grid-b" id="pics">
 			    <div class="ui-block-a">
 		        	<a href="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" class="swipebox">
 		        		<img alt="alt..." src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" />
@@ -238,15 +238,48 @@
 			<div data-role="collapsible" data-mini="true" data-theme="b" class="addnotes">
     			<h4>Notes</h4>
 			<!--	<label for="textarea">Textarea:</label> -->
-				<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
-				<!--SLIDER-->
-				<label for="slider-fill">Skin Satisfaction Rating:</label>
-				<input type="range" name="slider-fill" id="slider-fill" value="50" min="0" max="100" step="1" data-highlight="true">
-				
+				<div data-role="container" class="notescontain">
+					<form>
+						<textarea cols="20" rows="8" name="textarea" id="textarea" class="enternotes"></textarea>
+
+
+						<div class="ui-grid-a">
+							<div class="ui-block-a">
+								<select name="select-choice-a" id="select-choice-a" data-native-menu="false" data-mini="true">
+								    <option>Active Spots</option>
+								    <option value="0">No Active Spots</option>
+								    <option value="1">1 Active Spot</option>
+								    <option value="2">2 Active Spots</option>
+								    <option value="3">3 Active Spots</option>
+								    <option value="4">4 Active Spots</option>
+								    <option value="5+">5-10 Active Spots</option>
+								    <option value="10+">10+  Active Spots</option>
+								</select>
+							</div>
+							<div class="ui-block-b">
+								<select name="select-products" id="select-products" multiple="multiple" data-native-menu="false" data-icon="grid" data-mini="true">
+								    <option>Products Used:</option>
+								    <optgroup label="Regularly Used Products">
+								        <option value="Cleanser">Cleanser</option>
+								        <option value="Toner">Toner</option>
+								        <option value="BHA">BHA</option>
+								        <option value="AHA">AHA</option>
+								        <option value="Spot Treatment">Spot Treatment</option>
+								    </optgroup>
+								    <optgroup label="Occasional Products">
+								        <option value="clay">Clay Mask</option>
+								        <option value="honey">Honey Mask</option>
+								        <option value="ground">Mint Julep Mask</option>
+								    </optgroup>
+								</select>
+							</div>
+						</div>
+
+						<input type="button" data-mini="true" value="Submit" data-theme="b">
+					</form>				
+				</div>
 			</div>
-
-
-	</div>
+		</div>
 
 	<div data-role="footer" data-position="fixed" data-theme="b">
 		<div data-role="navbar" data-theme="a" data-iconpos="left">
