@@ -1,7 +1,7 @@
 var data = require("../diaries.json");
 
-exports.addFriend = function(req, res) {  
-	var name = req.query.name;
+exports.addDiary = function(req, res) {  
+	var name = req.query.diaryname;
 
 	
 	var jsonObject = 		{
