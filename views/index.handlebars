@@ -42,7 +42,7 @@
 
 	<!--Login Content-->
 	<div data-role="content" data-theme="c">	
-		<!--Logo--><center><img src="http://imgur.com/fmf0r2Z" />
+		<!--Logo--><center><img src="http://i.imgur.com/fmf0r2Z.png" alt="logo">
 
 		<!--Login Form-->
 		<form method="PUT" action="api/auth" data-ajax="false">
@@ -134,18 +134,35 @@
 	</div>
 	
 	<div data-role="content" data-theme="c">	
-		<h4>My Diaries</h4>
+		<div class="ui-grid-a">
+			<div class="ui-block-a"><h4>My Diaries</h4></div>
+			<!--<div class="ui-block-b">
+				<div id="custom-border-radius">
+				    <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-notext ui-corner-all">No text</a>
+				</div>			
+			</div>-->
+		</div>
+		
+
+		<a href="#newdiary" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-icon-plus ui-btn-icon-left ui-btn-a" data-transition="pop">Create New Diary</a>
+		<div data-role="popup" id="newdiary" data-theme="a" class="ui-corner-all">
+			<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+
+			<form id="DiaryForm" role="form" method="get" action="/adddiary">
+			<div style="padding:10px 20px;">
+				<h4>Diary Name</h4><input type="text" id="diaryname" name="diaryname" placeholder="e.g. 'BHA Patch Test'">
+				<input type="submit" id="submitBtn" class="btn btn-default" value="Create Diary" ></input>
+			</div>
+			</form>
+		</div>
+
+
 		{{#each diaries}}
 		<a href="#diary" data-role="button" data-theme="b" data-transition="slide" data-icon="book"> {{diaryname}} </a>
 		{{/each}}
 	</div><!-- /content -->
 
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
-		<div data-role="navbar" data-theme="a" data-iconpos="left">
-			<ul>
-				<li><a href="#newdiary" data-transition="slideup" data-icon="carat-u">Create New Diary</a></li>
-			</ul>
-		</div>
 	</div><!-- /footer -->
 
 </div><!-- /page -->
@@ -216,6 +233,9 @@
 	
 	<div data-role="content" data-theme="c">	
 		<h4>DIARY VIEW</h4>
+
+		<a href="#newphoto" data-mini="true" class="ui-btn ui-icon-plus ui-btn-icon-top">Add New Photos</a>
+
 			<h5>mm/dd/yyyy</h5>
 			<div class="ui-grid-b" id="pics">
 			    <div class="ui-block-a">
@@ -237,7 +257,7 @@
 		    	</div>
 			</div>
 			<!--Collapsable-->
-			<div data-role="collapsible" data-mini="true" data-theme="b" class="addnotes">
+			<div data-role="collapsible" data-theme="b" class="addnotes">
     			<h4>Notes</h4>
 			<!--	<label for="textarea">Textarea:</label> -->
 				<div data-role="container" class="notescontain">
@@ -247,7 +267,7 @@
 
 						<div class="ui-grid-a">
 							<div class="ui-block-a">
-								<select name="select-choice-a" id="select-choice-a" data-native-menu="false" data-mini="true">
+								<select name="select-choice-a" id="select-choice-a" data-native-menu="false" >
 								    <option>Active Spots</option>
 								    <option value="0">No Active Spots</option>
 								    <option value="1">1 Active Spot</option>
@@ -259,7 +279,7 @@
 								</select>
 							</div>
 							<div class="ui-block-b">
-								<select name="select-products" id="select-products" multiple="multiple" data-native-menu="false" data-mini="true">
+								<select name="select-products" id="select-products" multiple="multiple" data-native-menu="false" >
 								    <option>Products Used</option>
 								    <optgroup label="Regularly Used Products">
 								    	<option value="OCM">Oil Cleansing</option>
@@ -275,6 +295,7 @@
 								        <option value="honey">Honey Mask</option>
 								        <option value="ground">Mint Julep Mask</option>
 								    </optgroup>
+								    <a href="#" data-rel="back" class="ui-btn">Save</a>
 								</select>
 							</div>
 						</div>
@@ -286,11 +307,7 @@
 		</div>
 
 	<div data-role="footer" data-position="fixed" data-theme="b">
-		<div data-role="navbar" data-theme="a" data-iconpos="left">
-			<ul>
-				<li><a href="#newphoto" data-transition="slideup" data-icon="carat-u">Add New Photo</a></li>
-			</ul>
-		</div>
+
 	</div><!-- /footer -->
 </div><!-- /page -->
 
@@ -340,11 +357,11 @@
     <ul>
       <li><a href="#one" data-ajax="false">Left</a></li>
       <li><a href="#two" data-ajax="false">Center</a></li>
-      <li><a href="ajax-content.html" data-ajax="false">Right</a></li>
+      <li><a href="#three" data-ajax="false">Right</a></li>
     </ul>
   </div>
   <div id="one">
-  		<div data-role="container">
+  		<div>
 			<div id="container1" class="twentytwenty-container">
 			<img src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg">
 			<img src="http://becksilverman.com/wp-content/uploads/2008/03/fam_20080312_0161.jpg">
@@ -352,7 +369,7 @@
 		</div>
   </div>
   <div id="two">
-  		<div data-role="container">
+  		<div>
 			<div id="container2" class="twentytwenty-container">
 			<img src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg">
 			<img src="http://becksilverman.com/wp-content/uploads/2008/03/fam_20080312_0161.jpg">
@@ -360,7 +377,7 @@
 		</div>
   </div>
   <div id="three">
-  		<div data-role="container">
+  		<div>
 			<div id="container3" class="twentytwenty-container">
 			<img src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg">
 			<img src="http://becksilverman.com/wp-content/uploads/2008/03/fam_20080312_0161.jpg">
@@ -369,14 +386,10 @@
   </div>
 </div>
 
-	</div>
+</div>
 
-	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
-		<div data-role="navbar" data-theme="a" data-iconpos="left">
-			<ul>
-				<li><a href="#newphoto" data-transition="slideup" data-icon="carat-u">Add New Photo</a></li>
-			</ul>
-		</div>
+	<div data-role="footer" data-position="fixed" data-theme="b">
+
 	</div><!-- /footer -->
 </div>
 
@@ -395,18 +408,24 @@
 		<!-- /content-->
 
 	<div data-role="header" data-theme="b"  data-add-back-btn="true">
-		<h1>Add New Photo</h1>
+		<h1>Add New Photos</h1>
 				<a href="#mypanel" data-icon="bars" data-role="button" class="showMenu ui-btn-right" data-iconpos="notext"></a>
 	</div>
 
 	<div data-role="content" data-theme="c">
-		<h3>Add New Photo</h3>
+		<h3>Add New Photos</h3>
 	<!--IMAGE CAPTURE AND UPLOAD VIA FORM-->
-		<form action="upload.htm" method="post" enctype="multipart/form-data">
+		<h4>Left Cheek</h4>
+		<form action="#" method="post" enctype="multipart/form-data">
  			<input type="file" accept="image/*">
-  			<input type="submit" value="Upload">
-		</form>
 	<!--END IMAGE CAPTURE AND UPLOAD-->
+		<h4>Center</h4>
+ 			<input type="file" accept="image/*">
+		<h4>Right Cheek</h4>
+ 			<input type="file" accept="image/*">
+		</form>
+		<a data-role="button" data-theme="b" data-icon="none" data-iconpos="right" id="button" onclick="swapButton()">Upload</a>
+
 	</div>
 
 	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
@@ -419,39 +438,7 @@
 </div>
 
 
-<!--ADD DIARY-->
-<div data-role="page" id="newdiary">
-		<!--panel-->
-	<div data-role="panel" id="mypanel" data-position="right" data-display="reveal" data-theme="b">
-		<ul data-role="listview" data-theme="b">
-    		<li data-icon="home"><a href="#home">Home</a></li>
-   			<li data-icon="clock"><a href="#reminders">Reminders</a></li>
-    		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
-		</ul></br>
-	</div><!-- /panel -->
 
-	<div data-role="header" data-theme="b" data-add-back-btn="true">
-		<h1>Create New Diary</h1>
-				<a href="#mypanel" data-icon="bars" data-iconpos="notext" class="ui-btn-right"></a>
-	</div>
-	<div data-role="content" data-theme="c">
-		<h3>New Diary Details</h3>
-	<form id="DiaryForm" role="form" method="get" action="/adddiary">
-		<h4>Diary Name</h4><input type="text" id="diaryname" name="diaryname">
-		<input type="submit" id="submitBtn" class="btn btn-default" value="Create Diary"></input>
-		<!--a href="#home" data-role="button" data-transition="slideup" data-direction="reverse">Create</a-->
-	</form>
-	</div>
-
-	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
-		<div data-role="navbar" data-theme="a" data-iconpos="left">
-			<ul>
-				<li><a href="#home" class="ui-btn-active ui-state-persist" data-transition="slideup" data-direction="reverse" data-icon="carat-d">Cancel</a></li>
-			</ul>
-		</div> 
-	</div><!-- /footer -->
-</div>
-<!--End ADD DIARY-->
 
 
 <!--REMINDERS-->
@@ -474,18 +461,19 @@
 	<!--on/off button-->
 		<div class="ui-grid-a" id="fuckthis">
 			<div class="ui-block-a" data-role="fieldcontain" data-type="horizontal">
-				<label for="flip-5"><h5>Diary 1:</h5></label>
+				<label for="flip-5"><h4>Diary 1</h4></label>
 				</div>
 			<div class="ui-block-b">
+				<strong>Turn Reminders:</strong>
 				<select name="flip-5" id="flip-5" data-role="slider" data-theme="c" data-track-theme="a" data-mini="true">
-						<option value="off">Off</option>
-						<option value="on">On</option>
+						<option value="off"> Off</option>
+						<option value="on"> On</option>
 				</select>
 			</div>
 		</div><!--/dairy1 button-->
 
 	
-	   <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+	   <fieldset data-role="controlgroup" data-type="horizontal" >
 		   <legend><p>Set Reminder Time:</p></legend>
 
 	    	<label for="select-choice-month">Month</label>
