@@ -1,0 +1,47 @@
+.fieldset {
+    width: 80%;
+}
+
+.ui-grid-b {
+	margin-left: -20px;
+	margin-right: -20px;
+	padding: 0px;
+	margin-top: -10px;
+}
+
+.pics a{
+	padding: 0px;
+	margin: -20px;
+}
+.ui-block-a img {
+    max-width  : 111%;
+    max-height : 100%;
+    margin-left: 0px;
+    padding: 0px;
+}
+.ui-block-b img {
+	max-width  : 111%;
+    max-height : 100%;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+.ui-block-c img {
+    max-width  : 111%;
+    max-height : 100%;
+    margin-left: 0px;
+}
+
+#ampm {
+    width: 80px;
+}
+
+.addnotes {
+    margin-left: -20px;
+    margin-top: -10px;
+    width: 115%;
+}
+
+.p {
+    margin-bottom: -10px;
+}
