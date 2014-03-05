@@ -3,13 +3,13 @@ var data = require('../diaries.json');
 
 exports.view = function(req, res){
 	console.log(data);
-	data ['grid'] = false;
+	data ['grid'] = true;
 	res.render('index',data);
 	};
 	
 exports.index2 = function(req, res){
 	console.log(data);
-	data ['grid'] = true;
+	data ['grid'] = false;
 	res.render('index2',data);
 	};
 	
