@@ -2,7 +2,7 @@
 
 <html> 
 	<head> 
-	<!-- Google Analytics Content Experiment code -->
+	<!-- Google Analytics Content Experiment code 
 <script>function utmx_section(){}function utmx(){}(function(){var
 k='83011003-0',d=document,l=d.location,c=d.cookie;
 if(l.search.indexOf('utm_expid='+k)>0)return;
@@ -15,6 +15,7 @@ length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
 valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
 </script><script>utmx('url','A/B');</script>
+
 <!-- End of Google Analytics Content Experiment code -->
 	<title>TR&#916;CK</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
@@ -150,26 +151,19 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	<div data-role="content" data-theme="c">	
 		<div class="ui-grid-a">
 			<div class="ui-block-a"><h4>My Diaries</h4></div>
-			<!--<div class="ui-block-b">
-				<div id="custom-border-radius">
-				    <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-notext ui-corner-all">No text</a>
-				</div>			
-			</div>-->
 		</div>
 		
-		<div id="createnewdiary">
-		<a href="#newdiary" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-icon-plus ui-btn-icon-left ui-btn-a" data-transition="pop">Create New Diary</a>
-		<div data-role="popup" id="newdiary" data-theme="a" class="ui-corner-all">
-		</div>
-			<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-
-			<form id="DiaryForm" role="form" method="get" action="/adddiary">
-			<div style="padding:10px 20px;">
-				<h4>Diary Name</h4><input type="text" id="diaryname" name="diaryname" placeholder="e.g. 'BHA Patch Test'">
-				<input type="submit" id="submitBtn" class="btn btn-default" value="Create Diary" ></input>
-			</div>
-			</form>
-		</div>
+ 		<a href="#newdiary" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-icon-plus ui-btn-icon-left ui-btn-a" data-transition="pop">Create New Diary</a>
+ 		<div data-role="popup" id="newdiary" data-theme="a" class="ui-corner-all">
+ 			<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+ 
+ 			<form id="DiaryForm" role="form" method="get" action="/adddiary">
+ 			<div style="padding:10px 20px;">
+ 				<h4>Diary Name</h4><input type="text" id="diaryname" name="diaryname" placeholder="e.g. 'BHA Patch Test'">
+ 				<input type="submit" id="submitBtn" class="btn btn-default" value="Create Diary" ></input>
+ 			</div>
+ 			</form>
+ 		</div>
 
 
 		{{#each diaries}}
@@ -241,7 +235,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		<div data-role="navbar" data-theme="a">
 			<ul>
 				<li><a href="#" data-role="button" class="ui-btn-active ui-state-persist"> Diary View </a></li>
-				<li><a href="#compare" data-role="button" data-transition="none"> Comparison View</a></li>
+				<li><a href="#" data-role="button" data-transition="none"> Comparison View</a></li>
 			</ul>
 		</div><!-- /header -->
 	</div>
@@ -254,20 +248,20 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			<h5>mm/dd/yyyy</h5>
 			<div class="ui-grid-b" id="pics">
 			    <div class="ui-block-a">
-		        	<a href="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" class="swipebox">
-		        		<img alt="alt..." src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" />
+		        	<a href="http://i.imgur.com/viqNv8h.jpg" class="swipebox">
+		        		<img alt="alt..." src="http://i.imgur.com/viqNv8h.jpg" />
 		        	</a>
 			    </div>
 
 			    <div class="ui-block-b">
-		        	<a href="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" class="swipebox" title="mm/dd/yyyy">
-		        		<img alt="alt..." src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" />
+		        	<a href="http://i.imgur.com/LR9th93.gif" class="swipebox">
+		        		<img alt="alt..." src="http://i.imgur.com/LR9th93.gif" />
 		        	</a>
 			    </div>
 	   
 	   		    <div class="ui-block-c">
-		        	<a href="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" class="swipebox">
-		        		<img alt="alt..." src="http://becksilverman.com/wp-content/uploads/2007/10/beckiphone.jpg" />	
+		        	<a href="http://i.imgur.com/J56QTFL.jpg" class="swipebox">
+		        		<img alt="alt..." src="http://i.imgur.com/J56QTFL.jpg" />	
 	        		</a>
 		    	</div>
 			</div>
@@ -348,7 +342,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		<div data-role="navbar" data-theme="a">
 			<ul>
 				<li><a href="#diary" data-role="button" data-transition="none"> Diary View</a></li>
-				<li><a href="#" data-role="button" class="ui-btn-active ui-state-persist"> Comparison View </a></li>
+				<li><a href="#" data-role="button" class="ui-btn-active"> Comparison View </a></li>
 			</ul>
 		</div><!-- /header -->
 	</div>
@@ -439,7 +433,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		<h4>Right Cheek</h4>
  			<input type="file" accept="image/*">
 		</form>
-		<a data-role="button" data-theme="b" data-icon="none" data-iconpos="right" id="button" onclick="swapButton()">Upload</a>
+			<a data-role="button" data-theme="b" data-icon="none" data-iconpos="right" id="button" onclick="swapButton()">Upload</a>
 
 	</div>
 
@@ -567,7 +561,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-48670865-1', 'tcr-track.herokuapp.com');
+  ga('create', 'UA-48670865-1', { 'cookieDomain': 'none' });
   ga('send', 'pageview');
 
 </script>
