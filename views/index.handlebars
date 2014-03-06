@@ -1,6 +1,21 @@
 <!DOCTYPE html> 
 
 <html> 
+<head>
+<!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='83011003-1',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
 
 	<title>TR&#916;CK</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
@@ -138,7 +153,7 @@
 			<div class="ui-block-a"><h4>My Diaries</h4></div>
 		</div>
 		
-<<<<<<< HEAD
+
 		<div id="createnewdiary">
 		<a href="#newdiary" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-icon-plus ui-btn-icon-left ui-btn-a" data-transition="pop">Create New Diary</a>
 		</div>
@@ -153,20 +168,6 @@
 			</div>
 			</form>
 		</div>
-=======
- 		<a href="#newdiary" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-icon-plus ui-btn-icon-left ui-btn-a" data-transition="pop">Create New Diary</a>
- 		<div data-role="popup" id="newdiary" data-theme="a" class="ui-corner-all">
- 			<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
- 
- 			<form id="DiaryForm" role="form" method="get" action="/adddiary">
- 			<div style="padding:10px 20px;">
- 				<h4>Diary Name</h4><input type="text" id="diaryname" name="diaryname" placeholder="e.g. 'BHA Patch Test'">
- 				<input type="submit" id="submitBtn" class="btn btn-default" value="Create Diary" ></input>
- 			</div>
- 			</form>
- 		</div>
->>>>>>> 319274ed20dbf6e9321f334880a85e188a7ae71a
-
 
 		{{#each diaries}}
 		<a href="#diary" data-role="button" data-theme="b" data-transition="slide" data-icon="book"> {{diaryname}} </a>
